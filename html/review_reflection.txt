@@ -1,0 +1,33 @@
+Briefly describe your understanding of what the browser does, including definitions of the following:
+
+client: The client is our local machine. Our computer.
+server: the server is another computer located on the internet who serves up files and various documents (ex. Facebook profiles, Web pages, photos, music… etc.) that the client can render. 
+render: the process of converting documents and various files into viewable content for people to read. 
+
+What is HTML? In your answer, include definitions of the following:
+
+HTML is a language that computers understand, they listen to HTML when they want to display content on a page. Tags for example are used in the HTML language as special key words to help the browser understand how to format and display the content. Tags are enclosed in <brackets> and they must have a closing bracket </>. 
+An HTML document or web page is composed of elements, they help make up the DOM tree, and each element can have HTML attributes specified. 
+
+The DOM is made up of nodes, which can be element, text, or comments. And Elements can also have attributes, things/ key words that tell that element how to behave and look.
+
+Elements can be block level or in line. Block level are ‘code blocks’ that occupy the space of a parent element like a <body> tag for example. In line elements can be seen within the block elements and is bounded within the tag or block it is placed in.
+
+
+Very briefly, explain the purpose of the following elements:
+
+Head- The most important/ visible text in the HTML page. There is only one h tag. Located before the body tag.
+body- comes after the head tag, contains the code and substance to your page.
+P- a paragraph tag
+form- a form tag. Used for user data entry.
+
+div- a division tag. Used to sort code, and create structure and organization. Particularly among block-level content.
+span— span tag. Used to ‘span’ over a group of inline elements. Will aid in styling and grouping.
+
+select- this tag will populate your page with a dropdown filled with options/ selections. The options will be determined based on the content of the option value in the option tag.
+h2- Heading 2. Second most important title on the HTML.
+ol- Ordered list.
+ul- Unordered list.
+table- table tag. Will create a table based on the contents within the tag.
+tr- table row
+td- table data
