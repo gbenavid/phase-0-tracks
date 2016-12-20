@@ -1,3 +1,13 @@
+
+#main_content{
+  /*width: 50%;*/
+  float: right;
+  min-width: 40%;
+  padding-left: 500px;
+}
+body{
+  width: 50%;ß
+}
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -11,7 +21,8 @@ cite {
 
 #external-links ul {
   list-style-type: none;
-  padding-left: 0px;
+  min-width: 30%;
+  float: left;
 }
 
 /* you're welcome to edit the
@@ -29,4 +40,9 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
 }
