@@ -1,0 +1,19 @@
+/*
+Use margins to center the octopus horizontally on the page, and to put a little bit of space above its head*/
+.octopus{
+	position: fixed;
+	margin-top: 100px;
+	margin-left: 15%;
+	z-index: -1;
+}
+/*Use positioning to put the hat and glasses on the octopus. Looking sharp!*/
+.hat{
+	position: fixed;
+	margin-top: 45px;
+	margin-left: 95px;
+}
+.shades{
+	position: fixed;
+	margin-top: 60px;
+	margin-left: 15%;
+}
