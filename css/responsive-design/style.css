@@ -52,6 +52,12 @@ figcaption {
     margin: 24px;
   }
 }
+@media screen and (max-width: 300px){
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 /*Add a media query that will 
 remove all padding from the 
 main content if the screen becomes
