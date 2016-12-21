@@ -14,6 +14,7 @@ Use margins to center the octopus horizontally on the page, and to put a little 
 }
 .shades{
 	position: fixed;
-	margin-top: 60px;
-	margin-left: 15%;
+	margin-top: 199px;
+	margin-left: 20%;
+	z-index: 1;
 }
