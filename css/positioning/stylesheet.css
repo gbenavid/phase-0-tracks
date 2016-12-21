@@ -1,1 +1,6 @@
-/*Use margins to center the octopus horizontally on the page, and to put a little bit of space above its head*/
+/*
+Use margins to center the octopus horizontally on the page, and to put a little bit of space above its head*/
+.octopus{
+	margin-top: 20%;
+	position: absolute;
+}
