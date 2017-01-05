@@ -1,0 +1,29 @@
+1. Write the algorithm for using an elevator. Spell everything out.
+- Find the elevator door
+	- Scan the upper portion of the walls (4 feet) from the ceiling until a series of lights are detected.
+	- Otherwise scan the upper portion of the walls (4 feet) from the ceiling until two doors moving aprt horizontally are detected. 
+- Navigate towards the doors and or (elevator) lights above the door. 
+	- If a wall is reached and is obstructing path to elevator, then move to the left (20 degree angle) until able to move freely once more.
+	- continue towards the elevator.
+- Find the coresponding button.
+	- Scan the area of the elevator, (two feet beyond the doors) for a number.
+- Press the button
+	- If the number is the number you need then stay on the same floor. 
+	- Otherwise, if the number is greater than the number you need press the down arrow key located near the elevator.
+	- Otherwise press the up arrow key.
+-Pass through the door when the doors open.
+	- Scan the room for a series of circular lights.
+	- Loop through each number (from top row to bottom & from left to right) until the vaule of the floor matches the number on the button. 
+	- If the button matches the floor, press the button.
+- Pass through the door when the floor is reached
+
+2. Come up with an example of a common task in your life that could be translated into an algorithm.
+Making an apple cider vinegar cinniomon tonic. 
+- When glass is under censor, pour 
+
+
+
+
+
+
+
