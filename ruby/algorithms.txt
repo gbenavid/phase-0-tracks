@@ -1,11 +1,11 @@
 1. Write the algorithm for using an elevator. Spell everything out.
 - Find the elevator door
 	- Scan the upper portion of the walls (4 feet) from the ceiling until a series of lights are detected.
-	- Otherwise scan the upper portion of the walls (4 feet) from the ceiling until two doors moving aprt horizontally are detected. 
+	- Otherwise scan the upper portion of the walls (4 feet) from the ceiling until two doors moving apart horizontally are detected. 
 - Navigate towards the doors and or (elevator) lights above the door. 
 	- If a wall is reached and is obstructing path to elevator, then move to the left (20 degree angle) until able to move freely once more.
 	- continue towards the elevator.
-- Find the coresponding button.
+- Find the corresponding button.
 	- Scan the area of the elevator, (two feet beyond the doors) for a number.
 - Press the button
 	- If the number is the number you need then stay on the same floor. 
@@ -18,12 +18,18 @@
 - Pass through the door when the floor is reached
 
 2. Come up with an example of a common task in your life that could be translated into an algorithm.
-Making an apple cider vinegar cinniomon tonic. 
-- When glass is under censor, pour 
 
-
-
-
-
-
-
+Sorting laundry that's left in front of the tub
+- Start in the bathroom (coordinates 'xyz')
+- Find clothes
+	- Scan four feet in front of bathtub
+	- Evaluate object
+		- If object is less than 2lbs and shorter than 6 inches and is within 4 feet of the bathtub, then pick up object.
+		- Keep picking up clothes until the entire surface is free of misplaced items
+- Find hamper
+	- navigate into main room and locate hamper (coordinates 'xyz')
+- Empty clothes into hamper
+	- Raise clothes above the height of the hamper
+	- Place the clothes in the center of the opening of the hamper
+	- Drop clothes into the hamper.
+		- repeat the process until all clothes are inside the hamper.
