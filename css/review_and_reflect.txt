@@ -1,0 +1,35 @@
+Name at least three categories of CSS adjustments (example: colors)?
+* Fonts
+* Width & Height
+* Background color
+
+What are the three ways to link a CSS rule to an HTML document? Which one is the best and why?
+* External: it is considered best practices to link your style sheet externally, because it leaves less room for error and is easier for other people to read. This means you have one page for your content and another for your HTML.
+* Inline: mix your content (HTML) with your styling. Is not ideal, and should be used sparingly.
+* Internal: Using the style tag to display your styling on your HTML page.
+
+What is a selector? Give examples of at least three types of selectors.
+A selector is how you call an element on your HTML page. Three examples are
+* ID (#external_links)
+* Class (.external_links)
+* Call the element by it’s type/ tag. 
+Ex. of calling an element by its type:
+a {
+	visited: hot-pink;
+}
+
+What is the box model?
+The box model gives a visual to your elements’ CSS styling. It displays, 
+1. The Pontent; 
+2. The Padding; 
+3. Border; and 
+4. Margin. 
+This is represented as a color coordinated box with content in the center and the rest flowing outward in the described order. 
+
+Explain and give an example of the cascading effect of CSS.
+Cascading is a term used when there are multiple linked style sheets used for an HTML. The styles are all being applied, there is a certain order that they go in. For example you may have black text in your HTML when your page with hits a certain point, that black text will be overridden and the user will see red text. 
+
+Name two CSS techniques that assist in responsive design.
+* Giving the width or height a percentage vs a px;
+* Using float (i.e. float: left)
+* A media query
