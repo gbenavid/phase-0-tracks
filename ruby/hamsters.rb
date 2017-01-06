@@ -17,7 +17,7 @@ adoptable = gets.chomp
 #get hamster age
 puts "How old is your hamster?"
 #store hamster age in var
-age = gets
+age = gets.chomp
 puts "Hamster data:
 Name: #{name}
 Age: #{age}
