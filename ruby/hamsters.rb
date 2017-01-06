@@ -5,7 +5,7 @@ name = gets.chomp
 #get hamster noise level
 puts "On a scale of 1 (mute)- 10(Loud), how loud would you say your hamster is?"
 #store volume in var
-noise = gets.chomp
+noise = gets.to_i
 #get string for hamster color
 puts "What color is your hamster?"
 #store string in var
