@@ -1,12 +1,18 @@
 #RELEASE 1: Interview with the Vampire
-
 puts "what's your name"
-input = gets.chomp
+name = gets.chomp
+
 
 puts "how old are you?"
-age = gets.chomp
+age = get.chomp.to_i
+
 puts "what year were you born?"
-dob = gets.chomp
+dob = gets.chomp.to_i
+
+validAge = 2017 - dob == age
+
+
+
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 garlic = gets.chomp
 puts "Would you like to enroll in the company’s health insurance?"
@@ -32,11 +38,8 @@ vampires_like_garlic = false
 	#return result. 
 
 
-
-
-
-
-
+# go in order as prompted
+#check out time class
 
 
 
