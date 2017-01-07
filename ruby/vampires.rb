@@ -55,14 +55,16 @@ dob = Time.new.year - gets.to_i
 validAge = age == dob 
 puts "I enjoy eating garlic bread. (true or false)"
 likes_garlic = gets.chomp
-puts "I am interested in signing up for health at Werewolf Inc."
+puts "I am interested in signing up for health at Werewolf Inc. (true/ false)"
 healthcare = gets.chomp
 
 if (validAge && (likes_garlic || healthcare))
-	puts "Probably not a vampire."
-elsif (likes_garlic || ())
-	puts "Probably a vampire"
-else puts "Results inconclusive"
+	p "Probably not a vampire."
+elsif !(validAge && likes_garlic && healthcare)
+	p "Almost certainly a vampire."
+elsif !(validAge && (likes_garlic || healthcare))
+	p "Probably a vampire"
+else p "Results inconclusive"
 end
 
 # If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
