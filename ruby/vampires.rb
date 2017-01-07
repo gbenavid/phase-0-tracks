@@ -45,9 +45,10 @@
 # !vampires_like_garlic ---> true
 # !(wolves_like_sunshine && wolves_like_garlic) ---> false
 
-# Match the following conditions in the order they're listed.
-# If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
+# RELEASE 2: Detection Logic	
 
+p "How many employees will we be processing today?"
+interviewees = gets.to_i
 p "What's your name?"
 name = gets.chomp
 puts "What's your age?"
@@ -59,43 +60,27 @@ puts "I enjoy eating garlic bread. (true or false)"
 likes_garlic = gets.chomp
 puts "I am interested in signing up for health at Werewolf Inc. (true/ false)"
 healthcare = gets.chomp
-
-if name == ("Tu Fang" || "Drake Cula")
-	p "Definitely a vampire"
-elsif (validAge && (likes_garlic || healthcare))
-	p "Probably not a vampire."
-elsif !(validAge && likes_garlic && healthcare)
-	p "Almost certainly a vampire."
-elsif !(validAge && (likes_garlic || healthcare))
-	p "Probably a vampire"
-else p "Results inconclusive"
+def logic 
+	if name == ("Tu Fang" || "Drake Cula")
+		p "Definitely a vampire"
+	elsif (validAge && (likes_garlic || healthcare))
+		p "Probably not a vampire."
+	elsif !(validAge && likes_garlic && healthcare)
+		p "Almost certainly a vampire."
+	elsif !(validAge && (likes_garlic || healthcare))
+		p "Probably a vampire"
+	else p "Results inconclusive"
+	end
+end
+i = 1
+while i < interviewees do 
+	logic
+	i += 1
 end
 
-# If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
-# If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
-# Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
-# Otherwise, print “Results inconclusive.”
- # give a question 
- # update a varible
- # give another question
- # print the result at the end of the survey
-
-
-
-#def defoA_Vampire = 
-	# define a method in Ruby.
-	# create a var to hold result
-	# if name === 'tu fang' || 'Drake Cula' results = "definitley a vampire"
-	# if (age = true && (garlic bread = true || healthcare = true)) result = "probably not a vampire"
-	# if (age = false && (garlic == false || healthcare = false)) result = probably a vampire
-	# if (age = false && garlic = false && healthcare = false) result = "Almost certainly a vampire"
-	# Otherwise result = "Results Inconclusive"
-	#return result. 
-
+# RELEASE 3 : Process Multiple Employees
 
 # go in order as prompted
-#check out time class
-
 
 
 
