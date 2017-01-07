@@ -8,19 +8,18 @@ age = get.chomp.to_i
 
 puts "what year were you born?"
 dob = gets.chomp.to_i
-
-validAge = 2017 - dob == age
-
-
+# validAge = 2017 - dob == age
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 garlic = gets.chomp
+
 puts "Would you like to enroll in the company’s health insurance?"
 healthcare = gets.chomp
 
 puts "
 (#{name}, #{age}, #{dob}, #{garlic}, #{healthcare})
 "
+
 #RELEASE 2: Detection Logic
 wolves_like_sunshine = true
 wolves_like_garlic = true
