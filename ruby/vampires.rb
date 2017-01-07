@@ -48,6 +48,8 @@
 # Match the following conditions in the order they're listed.
 # If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
 
+p "What's your name?"
+name = gets.chomp
 puts "What's your age?"
 age = gets.to_i
 puts "What year were you born?"
@@ -58,7 +60,9 @@ likes_garlic = gets.chomp
 puts "I am interested in signing up for health at Werewolf Inc. (true/ false)"
 healthcare = gets.chomp
 
-if (validAge && (likes_garlic || healthcare))
+if name == ("Tu Fang" || "Drake Cula")
+	p "Definitely a vampire"
+elsif (validAge && (likes_garlic || healthcare))
 	p "Probably not a vampire."
 elsif !(validAge && likes_garlic && healthcare)
 	p "Almost certainly a vampire."
