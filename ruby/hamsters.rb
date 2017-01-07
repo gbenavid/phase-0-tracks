@@ -5,7 +5,7 @@ name = gets.chomp
 #get hamster noise level
 puts "On a scale of 1 (mute)- 10(Loud), how loud would you say your hamster is?"
 #store volume in var
-noise = gets.chomp
+noise = gets.chomp.to_i
 #get string for hamster color
 puts "What color is your hamster?"
 #store string in var
@@ -17,7 +17,11 @@ adoptable = gets.chomp
 #get hamster age
 puts "How old is your hamster?"
 #store hamster age in var
-age = gets
+age = gets.chomp
+if age == ''
+	age = nil
+else age = age.to_i
+end
 puts "Hamster data:
 Name: #{name}
 Age: #{age}
