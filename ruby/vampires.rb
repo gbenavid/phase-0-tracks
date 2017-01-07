@@ -45,6 +45,37 @@
 # !vampires_like_garlic ---> true
 # !(wolves_like_sunshine && wolves_like_garlic) ---> false
 
+# Match the following conditions in the order they're listed.
+# If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
+
+puts "What's your age?"
+age = gets.to_i
+puts "What year were you born?"
+dob = Time.new.year - gets.to_i
+validAge = age == dob 
+puts "I enjoy eating garlic bread. (true or false)"
+likes_garlic = gets.chomp
+puts "I am interested in signing up for health at Werewolf Inc."
+healthcare = gets.chomp
+
+if (validAge && (likes_garlic || healthcare))
+	puts "Probably not a vampire."
+elsif (likes_garlic || ())
+	puts "Probably a vampire"
+else puts "Results inconclusive"
+end
+
+# If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
+# If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
+# Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
+# Otherwise, print “Results inconclusive.”
+ # give a question 
+ # update a varible
+ # give another question
+ # print the result at the end of the survey
+
+
+
 #def defoA_Vampire = 
 	# define a method in Ruby.
 	# create a var to hold result
