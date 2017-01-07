@@ -22,19 +22,28 @@
 
 #RELEASE 2: Detection Logic
 
-
-wolves_like_sunshine = true
-wolves_like_garlic = true
-vampires_like_sunshine = false
-vampires_like_garlic = false
+# wolves_like_sunshine = true
+# wolves_like_garlic = true
+# vampires_like_sunshine = false
+# vampires_like_garlic = false
 
 #Example elsif statment:
-if (vampires_like_garlic)
-	puts "Not a vampire"
-elsif (wolves_like_sunshine)
-	puts "Someone enjoys garlic"
-end
+# if (vampires_like_garlic)
+# 	puts "Not a vampire"
+# elsif (wolves_like_sunshine)
+# 	puts "Someone enjoys garlic"
+# end
 
+# IRB Practice
+# In terminal run:
+# wolves_like_garlic && wolves_like_sunshine --->> true
+# wolves_like_garlic || vampires_like_garlic --->> true
+# wolves_like_garlic && vampires_like_garlic ---false
+# wolves_like_garlic && (vampires_like_sunshine || vampires_like_garlic) ---> false
+# (wolves_like_garlic && vampires_like_garlic) || wolves_like_sunshine ---> true
+# vampires_like_garlic ---> false
+# !vampires_like_garlic ---> true
+# !(wolves_like_sunshine && wolves_like_garlic) ---> false
 
 #def defoA_Vampire = 
 	# define a method in Ruby.
