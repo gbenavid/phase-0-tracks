@@ -22,8 +22,26 @@ puts "
 "
 # RELEASE 2:
 # Match the following conditions in the order they're listed. ---> b
-# Your program should base its result on the latest condition matched, not the first condition matched. In other words, it's not a "only one condition will apply" sort of scenario. This may mean repeatedly updating a variable as each condition is checked, so that the variable always contains the most precise result.
+# Your program should base its result on the latest condition matched, not the first condition matched. In other words, it's not a "only one condition will apply" sort of scenario. ---> b
+# This may mean repeatedly updating a variable as each condition is checked, so that the variable always contains the most precise result.
 
+p "Whats your name?"
+sirname = gets.chomp
+  # if sirname evaluates to Drake Cula or Tu Fang run "Definitley a Vampire."
+ p "Do you like garlic?"
+garlic = gets.chomp
+# keep looping until you get a 'true' or 'false' answer
+if (age && garlic && healthcare) 
+  p "Probably not a Vampire. Phew"#If these evaluate to true 
+elsif (age && (garlic || healthcare)) == false
+# elsif (age(false) && (garlic(false) || healcare(false)))  
+   p "Probably a Vampire."
+else p #If these evaluate to false
+end
+
+# the prompt will continuely update the variable to a true or false value based on the conditional if statement it is passed through. When the prompts are finished you will have one remaning outcome of wheather this guy is a vampire or not. 
+
+# -----
 # If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
 
 # If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
@@ -31,7 +49,7 @@ puts "
 # If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
 
 # Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
-
+# -----
 
 
 
@@ -42,6 +60,7 @@ puts "
 # ------NOTES TO SELF
 # Here are some outcomes (rules if you will) for conditional statements.
 # true && true --->> true
+# false && false ---> false
 # true || false --->> true
 # true && false ---false
 # true && (false || false) ---> false
