@@ -1,74 +1,74 @@
 # RELEASE 1:
 # Here we want to collect intelligence on candidate(s). We will make use of this information latter on when we determine wheather s/he is a vampire or not. 
-p "Whats your name?"
-sirname = gets.chomp
-if sirname == "Drake Cula"
-  sirname = false
-elsif sirname == "Tu Fang"
-  sirname = false
-else sirname = true
-end
-
-puts "What's your age?"
-age = gets.to_i
-puts "What year were you born?"
-dob = Time.new.year - gets.to_i
-age_isvalid = age == dob 
-
-#Asking garlic question:
-valid_input = false
-until valid_input
-  puts "I am the type of person who enjoys garlic (true/ false)."
-  likes_garlic = gets.chomp
-  if likes_garlic == "true"
-    valid_input = true
-  elsif likes_garlic == "false"
-    valid_input = true
-  else
-    p "Sorry, that is not a valid answer, please type 'true' or 'false'"
+p "How many people are scheduled to interview today?"
+employees_to_be_interviewed = gets.to_i
+until employees_to_be_interviewed == 0
+  p "Whats your name?"
+  sirname = gets.chomp
+  if sirname == "Drake Cula"
+    sirname = false
+  elsif sirname == "Tu Fang"
+    sirname = false
+  else sirname = true
   end
-end
 
-# Asking healthcare question
-valid_input = false
-until valid_input
-  puts "I will most likely enroll in the healthcare plan at Werewolf Inc. (true/ false)."
-  wants_healthcare = gets.chomp
-  if wants_healthcare == "true"
-    valid_input = true
-  elsif wants_healthcare == "false"
-    valid_input = true
-  else
-    p "Sorry, that is not a valid answer, please type 'true' or 'false'"
+  puts "What's your age?"
+  age = gets.to_i
+  puts "What year were you born?"
+  dob = Time.new.year - gets.to_i
+  age_isvalid = age == dob 
+
+  #Asking garlic question:
+  valid_input = false
+  until valid_input
+    puts "I am the type of person who enjoys garlic (true/ false)."
+    likes_garlic = gets.chomp
+    if likes_garlic == "true"
+      valid_input = true
+    elsif likes_garlic == "false"
+      valid_input = true
+    else
+      p "Sorry, that is not a valid answer, please type 'true' or 'false'"
+    end
   end
+
+  # Asking healthcare question
+  valid_input = false
+  until valid_input
+    puts "I will most likely enroll in the healthcare plan at Werewolf Inc. (true/ false)."
+    wants_healthcare = gets.chomp
+    if wants_healthcare == "true"
+      valid_input = true
+    elsif wants_healthcare == "false"
+      valid_input = true
+    else
+      p "Sorry, that is not a valid answer, please type 'true' or 'false'"
+    end
+  end
+
+  # Printing data...
+  puts "----
+  Age: #{age}, 
+  DOB: #{dob}, 
+  Likes garlic: #{likes_garlic}, 
+  Wants healthcare: #{wants_healthcare}
+  ----"
+  #Name: #{sirname}" HELP~~~~~~~can't access value inside a boolean~~~~~~~~~~~~HELP #{DOB} ~~~~~~~HELP.
+
+  # RELEASE 2: Conditional Logic Is this person a vampire, or what??? Let's find out!
+  if age_isvalid && likes_garlic && wants_healthcare && sirname
+    p "Probably not a Vampire. ~Phew!"
+  elsif !age_isvalid && sirname && (likes_garlic || wants_healthcare)
+    p "Probably a Vampire."
+  elsif !age_isvalid && !likes_garlic && !wants_healthcare && sirname
+    p "Almost certainly a vampire...."
+  elsif !sirname
+    p "VAMPIRE!!!!!!"
+  else 
+    p "Results inconclusive."
+  end
+  employees_to_be_interviewed = employees_to_be_interviewed - 1
 end
-
-puts 
-"(#{sirname}, 
-#{age}, 
-#{dob}, 
-#{likes_garlic}, 
-#{wants_healthcare})"
-
-# RELEASE 2: Conditional Logic
-if age_isvalid && likes_garlic && wants_healthcare && sirname# all are true
-  p "Probably not a Vampire. Phew!"#If these evaluate to true 
-elsif !age_isvalid && (likes_garlic || wants_healthcare)
-  p "Probably a Vampire."
-elsif (!age_isvalid && !likes_garlic && !wants_healthcare)
-  p "Almost certainly a vampire."
-elsif !sirname
-  p "Definitely a vampire"
-else 
-  p "Results inconclusive."
-end
-
-# the prompt will continuely update the variable to a true or false value based on the conditional if statement it is passed through. When the prompts are finished you will have one remaning outcome of wheather this guy is a vampire or not. 
-
-# -----
-# Print the result at the end of the survey.
-# -----
-
 # ------NOTES TO SELF
 # Here are some outcomes (rules if you will) for conditional statements.
 # true && true --->> true
