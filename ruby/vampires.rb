@@ -5,7 +5,7 @@ Print the result at the end of the survey.
 puts "what's your name"
 sirname = gets.chomp
 
-puts "how old are you?"
+puts "How old are you?"
 age = gets.chomp
 
 puts "what year were you born?"
@@ -28,27 +28,35 @@ puts "
 p "Whats your name?"
 sirname = gets.chomp
   # if sirname evaluates to Drake Cula or Tu Fang run "Definitley a Vampire."
+if sirname == "Drake Cula"
+  sirname = false
+elsif sirname == "Tu Fang"
+  sirname = false
+else sirname = true
+end
  p "Do you like garlic?"
 garlic = gets.chomp
 # keep looping until you get a 'true' or 'false' answer
-if (age && garlic && healthcare) 
-  p "Probably not a Vampire. Phew"#If these evaluate to true 
-elsif (age && (garlic || healthcare)) == false
-# elsif (age(false) && (garlic(false) || healcare(false)))  
-   p "Probably a Vampire."
-else p #If these evaluate to false
+if age_isvalid && likes_garlic && wants_healthcare # all are true
+  p "Probably not a Vampire. Phew!"#If these evaluate to true 
+elsif !age_isvalid && (likes_garlic || wants_healthcare)
+  p "Probably a Vampire."
+elsif (!age_isvalid && !likes_garlic && !wants_healthcare)
+  p "Almost certainly a vampire."
+elsif #sirname === (Drake Cula or Tu Fang)
+  p "Definitely a vampire"
+else 
+  p "Results inconclusive."
 end
 
 # the prompt will continuely update the variable to a true or false value based on the conditional if statement it is passed through. When the prompts are finished you will have one remaning outcome of wheather this guy is a vampire or not. 
 
 # -----
-# If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
 
-# If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
-
-# If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
 
 # Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
+# Otherwise, print “Results inconclusive.”
+# Print the result at the end of the survey.
 # -----
 
 
