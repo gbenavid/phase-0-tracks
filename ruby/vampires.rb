@@ -1,15 +1,21 @@
 # RELEASE 1:
 # Here we want to collect intelligence on candidate(s). We will make use of this information latter on when we determine wheather s/he is a vampire or not. 
-Otherwise, print “Results inconclusive.”
-Print the result at the end of the survey.
-puts "what's your name"
+p "Whats your name?"
 sirname = gets.chomp
+if sirname == "Drake Cula"
+  sirname = false
+elsif sirname == "Tu Fang"
+  sirname = false
+else sirname = true
+end
 
 puts "How old are you?"
 age = gets.chomp
-
-puts "what year were you born?"
+puts "What year were you born?"
 dob = gets.chomp
+# create a valid age variable 
+age_isvalid = true
+  if 
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 garlic = gets.chomp
@@ -20,30 +26,28 @@ healthcare = gets.chomp
 puts "
 (#{name}, #{age}, #{dob}, #{garlic}, #{healthcare})
 "
-# RELEASE 2:
-# Match the following conditions in the order they're listed. ---> b
-# Your program should base its result on the latest condition matched, not the first condition matched. In other words, it's not a "only one condition will apply" sort of scenario. ---> b
-# This may mean repeatedly updating a variable as each condition is checked, so that the variable always contains the most precise result.
+# RELEASE 2: Conditional Logic
 
-p "Whats your name?"
-sirname = gets.chomp
-  # if sirname evaluates to Drake Cula or Tu Fang run "Definitley a Vampire."
-if sirname == "Drake Cula"
-  sirname = false
-elsif sirname == "Tu Fang"
-  sirname = false
-else sirname = true
+valid_input = false
+until valid_input
+  puts "I am the type of person who enjoys garlic (true/ false)."
+  likes_garlic = gets.chomp
+  if likes_garlic == "true"
+    valid_input = true
+  elsif likes_garlic == "false"
+    valid_input = true
+  else
+    p "Sorry, that is not a valid answer, please type 'true' or 'false'"
+  end
 end
- p "Do you like garlic?"
-garlic = gets.chomp
-# keep looping until you get a 'true' or 'false' answer
-if age_isvalid && likes_garlic && wants_healthcare # all are true
+
+if age_isvalid && likes_garlic && wants_healthcare && sirname# all are true
   p "Probably not a Vampire. Phew!"#If these evaluate to true 
 elsif !age_isvalid && (likes_garlic || wants_healthcare)
   p "Probably a Vampire."
 elsif (!age_isvalid && !likes_garlic && !wants_healthcare)
   p "Almost certainly a vampire."
-elsif #sirname === (Drake Cula or Tu Fang)
+elsif !sirname
   p "Definitely a vampire"
 else 
   p "Results inconclusive."
@@ -52,10 +56,6 @@ end
 # the prompt will continuely update the variable to a true or false value based on the conditional if statement it is passed through. When the prompts are finished you will have one remaning outcome of wheather this guy is a vampire or not. 
 
 # -----
-
-
-# Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
-# Otherwise, print “Results inconclusive.”
 # Print the result at the end of the survey.
 # -----
 
@@ -95,13 +95,3 @@ end
 #   p "Made in a facility where nuts, and animal byproducts are processed."
 # end
 # returns >>> "Made in a facility where nuts, and animal byproducts are processed."
-
-#def defoA_Vampire = 
-  # define a method in Ruby.
-  # create a var to hold result
-  # if name === 'tu fang' || 'Drake Cula' results = "definitley a vampire"
-  # if (age = true && (garlic bread = true || healthcare = true)) result = "probably not a vampire"
-  # if (age = false && (garlic == false || healthcare = false)) result = probably a vampire
-  # if (age = false && garlic = false && healthcare = false) result = "Almost certainly a vampire"
-  # Otherwise result = "Results Inconclusive"
-  #return result. 
