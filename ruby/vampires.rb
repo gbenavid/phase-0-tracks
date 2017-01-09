@@ -9,13 +9,19 @@ elsif sirname == "Tu Fang"
 else sirname = true
 end
 
-puts "How old are you?"
+puts "What's your age?"
 age = gets.to_i
+
 puts "What year were you born?"
-dob = gets.to_i
-# create a valid age variable 
-# he has to know the year he was born. 
-# Time.new.year - #{dob} = age
+dob = Time.new.year - gets.to_i
+validAge = age == dob 
+
+
+# Time.new.year - #{dob} = #{age}
+# age_isvalid will be true if his age and dob match
+# otherwise it will be false
+# if 
+ 
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 garlic = gets.chomp
