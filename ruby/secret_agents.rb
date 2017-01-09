@@ -1,25 +1,26 @@
-
-#encrypt
-
-#define a method called encrypt that will advance every letter of a string one letter forward
-def encrypt(password)
-  #set index inside method - scope
-  index = 0
-#loop through it while the index is < than the length of the word
-  if password[index] == "z"
-        password[index] = "a"
-        index += 1
-    end
-  while index < password.length    
-    #shift the letter by one and update password
-    password[index] = password[index].next
-
-    #update index
+def encrypt (string) 
+index = 0
+  while index < string.length 
+    string[index] = string[index].next 
     index += 1
   end
-  #close loop and print password 
-  p password
+  puts string
 end
+decrypting_varible = encrypt
+def decrypt(encrypt)
+  index = 0
+  while index < encrypt.length
+  alphabet_index = 0
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+    until encrypt[index] == alphabet[alphabet_index]
+    alphabet_index += 1
+    end 
+         encrypt[index] = alphabet[alphabet_index - 1]
+  index += 1 
+  end
+  p encrypt
+end
+decrypt(decrypting_varible("abc"))
 
 # def decrypt(password)
 #   #store alphabet in a string so that we can access it.
