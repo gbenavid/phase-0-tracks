@@ -12,6 +12,18 @@ until employees_to_be_interviewed == 0
   else sirname = true
   end
 
+  allergic_reactions = false 
+  until allergic_reactions 
+  puts "Please list all alergies. Type 'done' when finsihed."
+  allergy = gets.chomp 
+      if allergy == "sunshine"
+      p "Probably a vampire"
+      allergic_reactions = true 
+      elsif allergy == "done"
+      allergic_reactions = true 
+      end 
+  end
+  #~~~~~~~~~~ ^^^^^^^ ^ ^ ^ NEED HELP ~~~~~~~~~~ HOW DO I QUIT THE ENTIRE PROGRAM AFTER THE SUNSHINE ALLERGY IS TRUE? ~~~~~~~~~ ~~~~~~~~~ ~~~~~~~~~ ~~~~~~~~~ ~~~~~~~~~
   puts "What's your age?"
   age = gets.to_i
   puts "What year were you born?"
@@ -69,6 +81,7 @@ until employees_to_be_interviewed == 0
   end
   employees_to_be_interviewed = employees_to_be_interviewed - 1
 end
+p "Actually these questions don't matter at all! Let's just be friends"
 # ------NOTES TO SELF
 # Here are some outcomes (rules if you will) for conditional statements.
 # true && true --->> true
