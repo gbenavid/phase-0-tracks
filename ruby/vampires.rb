@@ -1,7 +1,9 @@
-# RELEASE 1: Interview with the Vampire
-# Here we want to collect intelligence from our candidate. We will make use of this information latter on when we determine wheather s/he is a vampire or not. 
+# RELEASE 1:
+# Here we want to collect intelligence on candidate(s). We will make use of this information latter on when we determine wheather s/he is a vampire or not. 
+Otherwise, print “Results inconclusive.”
+Print the result at the end of the survey.
 puts "what's your name"
-input = gets.chomp
+sirname = gets.chomp
 
 puts "how old are you?"
 age = gets.chomp
@@ -18,7 +20,17 @@ healthcare = gets.chomp
 puts "
 (#{name}, #{age}, #{dob}, #{garlic}, #{healthcare})
 "
+# RELEASE 2:
+# Match the following conditions in the order they're listed. ---> b
+# Your program should base its result on the latest condition matched, not the first condition matched. In other words, it's not a "only one condition will apply" sort of scenario. This may mean repeatedly updating a variable as each condition is checked, so that the variable always contains the most precise result.
 
+# If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
+
+# If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
+
+# If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
+
+# Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
 
 
 
