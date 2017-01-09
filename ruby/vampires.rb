@@ -28,7 +28,7 @@ puts "
 #RELEASE 2: Detection Logic
 
 # ------NOTES TO SELF
-
+# Here are some outcomes (rules if you will) for conditional statements.
 # true && true --->> true
 # true || false --->> true
 # true && false ---false
@@ -37,6 +37,25 @@ puts "
 # false ---> false
 # !false ---> true
 # !(true && true) ---> false  
+
+# Here is an example of how to exceute code conditionally:
+# variable_containing_boolean = true
+# if (variable_containing_boolean)
+#   puts "A string that returns if that boolean is true."
+# else (variable_containing_boolean)
+#   puts "A string that returns if that boolean is false"
+# end
+
+# REMEMBER that any of the outcomes for the conditional statements could be used in our example for our conditional logic. To explain that better here is a simple example to give you a better idea on what that might look like:
+# soup = true
+# chips = false
+
+# if (soup && chips) #if both products are true(ly vegan products)
+#   p "All of our products are vegan friendly!"
+# else 
+#   p "Made in a facility where nuts, and animal byproducts are processed."
+# end
+# returns >>> "Made in a facility where nuts, and animal byproducts are processed."
 
 #def defoA_Vampire = 
   # define a method in Ruby.
