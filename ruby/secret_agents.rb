@@ -6,7 +6,7 @@ index = 0
   end
   puts string
 end
-decrypting_varible = encrypt
+decrypting_varible = encrypt(string)
 def decrypt(encrypt)
   index = 0
   while index < encrypt.length
