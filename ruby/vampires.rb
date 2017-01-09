@@ -29,6 +29,7 @@ until valid_input
   end
 end
 
+# Asking healthcare question
 valid_input = false
 until valid_input
   puts "I will most likely enroll in the healthcare plan at Werewolf Inc. (true/ false)."
@@ -41,16 +42,15 @@ until valid_input
     p "Sorry, that is not a valid answer, please type 'true' or 'false'"
   end
 end
-puts "Would you like to enroll in the company’s health insurance?"
-healthcare = gets.chomp
 
-puts "
-(#{name}, #{age}, #{dob}, #{garlic}, #{healthcare})
-"
+puts 
+"(#{sirname}, 
+#{age}, 
+#{dob}, 
+#{likes_garlic}, 
+#{wants_healthcare})"
+
 # RELEASE 2: Conditional Logic
-
-
-
 if age_isvalid && likes_garlic && wants_healthcare && sirname# all are true
   p "Probably not a Vampire. Phew!"#If these evaluate to true 
 elsif !age_isvalid && (likes_garlic || wants_healthcare)
