@@ -10,12 +10,12 @@ else sirname = true
 end
 
 puts "How old are you?"
-age = gets.chomp
+age = gets.to_i
 puts "What year were you born?"
-dob = gets.chomp
+dob = gets.to_i
 # create a valid age variable 
-age_isvalid = true
-  if 
+# he has to know the year he was born. 
+# Time.new.year - #{dob} = age
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 garlic = gets.chomp
