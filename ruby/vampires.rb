@@ -11,29 +11,11 @@ end
 
 puts "What's your age?"
 age = gets.to_i
-
 puts "What year were you born?"
 dob = Time.new.year - gets.to_i
-validAge = age == dob 
+age_isvalid = age == dob 
 
-
-# Time.new.year - #{dob} = #{age}
-# age_isvalid will be true if his age and dob match
-# otherwise it will be false
-# if 
- 
-
-puts "Our company cafeteria serves garlic bread. Should we order some for you?"
-garlic = gets.chomp
-
-puts "Would you like to enroll in the company’s health insurance?"
-healthcare = gets.chomp
-
-puts "
-(#{name}, #{age}, #{dob}, #{garlic}, #{healthcare})
-"
-# RELEASE 2: Conditional Logic
-
+#Asking garlic question:
 valid_input = false
 until valid_input
   puts "I am the type of person who enjoys garlic (true/ false)."
@@ -46,6 +28,16 @@ until valid_input
     p "Sorry, that is not a valid answer, please type 'true' or 'false'"
   end
 end
+
+puts "Would you like to enroll in the company’s health insurance?"
+healthcare = gets.chomp
+
+puts "
+(#{name}, #{age}, #{dob}, #{garlic}, #{healthcare})
+"
+# RELEASE 2: Conditional Logic
+
+
 
 if age_isvalid && likes_garlic && wants_healthcare && sirname# all are true
   p "Probably not a Vampire. Phew!"#If these evaluate to true 
@@ -64,12 +56,6 @@ end
 # -----
 # Print the result at the end of the survey.
 # -----
-
-
-
-
-
-#RELEASE 2: Detection Logic
 
 # ------NOTES TO SELF
 # Here are some outcomes (rules if you will) for conditional statements.
