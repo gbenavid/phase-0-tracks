@@ -29,6 +29,18 @@ until valid_input
   end
 end
 
+valid_input = false
+until valid_input
+  puts "I will most likely enroll in the healthcare plan at Werewolf Inc. (true/ false)."
+  wants_healthcare = gets.chomp
+  if wants_healthcare == "true"
+    valid_input = true
+  elsif wants_healthcare == "false"
+    valid_input = true
+  else
+    p "Sorry, that is not a valid answer, please type 'true' or 'false'"
+  end
+end
 puts "Would you like to enroll in the company’s health insurance?"
 healthcare = gets.chomp
 
