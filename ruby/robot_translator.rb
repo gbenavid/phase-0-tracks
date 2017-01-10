@@ -4,15 +4,18 @@
  # If it's not a lletter at all it becomes "boing".
  # Otherwise, it becomes "bleep".
 def translated_character(character)
-	# if not a letter
-	
-	# find out if letter is capitolized
+	# Let's set some variables to give our program the brainpower it needs to excecute our conditional logic.
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
 	halfway = alphabet.length/2
 	is_capitolized = (character.upcase == character)
-	# beginingof_alphabet ()
-	# p "Bloop"
-else #pushes character into another medthod we haven't yet defined
+	# Now let's start in on some conditional logic!
+	if !alphabet.index(character.downcase)
+	# if the lowercase version doesn't apear
+		"boing"
+	else
+		character
+	end
+	# character ---i had to remove this line of code before moving on because 
 end
 
 def translate(string)
@@ -24,4 +27,4 @@ def translate(string)
 	end
 	translated_phrase
 end
-puts translate("testing")
+puts translate("testing!   ")
