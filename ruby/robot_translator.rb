@@ -1,18 +1,17 @@
  # ROBOT TRANSLATOR
 
- # If a letter is capitalized & its in the first half of the alphabet, it becomes "Bloop."
- # Otherwise, it a letter is capitalized or it's the letter "e", it becomes "buzz".
+ # Otherwise, if a letter is capitalized or it's the letter "e", it becomes "buzz".
 
 def translated_character(character)
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
 	halfway = alphabet.length/2
 	is_capitolized = (character.upcase == character)
-	# Now let's start in on some conditional logic!
 	if !alphabet.index(character.downcase)
-	# if the character is not in the alphabet
 		"~BOING"
-	elsif is_capitolized && (alphabet.index(character.downcase) +1) <= halfway	
-		"~Bloop."
+	elsif is_capitolized && alphabet.index(character.downcase) < halfway	
+		"~BLOOP"
+	elsif is_capitolized || "e"
+		"~BUZZ"
 	else
 		"~BLEEP"
 	end
@@ -27,4 +26,4 @@ def translate(string)
 	end
 	translated_phrase
 end
-puts translate("!AaZ") #>> ~BOING.~BLOOP~BLEEP~BLEEP
+puts translate("!AaZe") # >> Boing~Bloop~Bleep~Buzz~Buzz
