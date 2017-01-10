@@ -1,0 +1,33 @@
+1. What is a variable? Why might a programmer use a variable?
+Variables allow us to store data. Programers might use them in order to use them as input values or modify them or pass them through a function
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+Ruby>> first_name + last_name = AbrahamLincoln >> full_name = AbrahamLincoln
+Data Types
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+	•	string a string is a data type that contains characters strung together. Ex. “Hello world”
+	•	integer a number that we naturally count with. ex. 1, 2, 3, 4, 5...
+	•	float a number that is a decimal or a number that is a fractioned number ex. .12, .5, 1.5, 2.6....
+	•	nil this is essentially a placeholder. Its similar to n/a or null or some other non-numerical value that means ‘nothing/ empty’
+	•	boolean true or false values ex. False
+Algorithms
+4. What is an algorithm? Programs that carry out a process until they meet an end condition that is set by the programer
+5. What are two common categories of algorithm in computer science?  For/ while loops
+Methods
+6. What is a method? Why might a programmer choose to use a method? A method is a function that can modify data. You define a method by setting a condition and then applying the method to a parameter you define for the method.
+7. Define the following terms as they relate to a method.	
+    •	return value- this is the output that a method produces
+	•	side effect - this is an effect of a built in method, it’s not a direct implication of the built in method but it can definitely be useful
+	•	parameter - what the method is able to use within the function. If the parameter is not defined then it will be outside of the methods scope
+	•	argument- the parameter carries arguments 
+	•	implicit return - opposite of side effect. What we ‘expect’ from that method
+8. What are global scope and method scope? - global scope is defined for the entire program, method or local scope is confined to the method it’s defined by
+How do those scopes impact the availability of data at different points in a program? You can’t use local scope globally and vise versa. 
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control? This helps eliminate bugs/ catch bugs early on. Its more tedious but will save you time when your spending less time searching for bugs/ writing code on methods that have bugs in them. It’s basically bug testing your building blocks of code committing and pushing and then working on the next bit
+10. Define the following terms as they relate to flow control.
+	•	loop -
+	•	if conditional logic. If this statement is true preform this condition
+	•	else conditional logic. If this condition is true preform this condition else preform that.
+	•	elsif conditional logic. If this condition is true preform this x elsif this condition is true preform y else preform z.
+	•	while condition is true preform condition end while when condition is false
+	•	until condition is false preform condition end when until is true
