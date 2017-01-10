@@ -25,6 +25,9 @@ def translate(string)
 	translated_phrase
 end
 # USER INTERACTION (UI)
-p "Enter the phase you need us to translate!"
-user_input = gets.chomp
-puts translate(user_input)
+loop do
+	p "Enter the phase you need us to translate! When your done translating, type '-QUIT-' to exit the Robo-Human translator 9000 (TM)"
+	user_input = gets.chomp
+	break if user_input == "-QUIT-"
+	puts translate(user_input)
+end
