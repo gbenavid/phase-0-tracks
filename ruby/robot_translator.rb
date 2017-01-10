@@ -1,7 +1,6 @@
  # ROBOT TRANSLATOR
 
 # BUSINESS LOGIC
-
 def translated_character(character)
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
 	halfway = alphabet.length/2
@@ -25,9 +24,6 @@ def translate(string)
 	end
 	translated_phrase
 end
-# puts translate("!AaZe") 
-# >> Boing~Bloop~Bleep~Buzz~Buzz
-
 # USER INTERACTION (UI)
 p "Enter the phase you need us to translate!"
 user_input = gets.chomp
