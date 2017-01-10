@@ -1,6 +1,6 @@
  # ROBOT TRANSLATOR
 
- # Otherwise, if a letter is capitalized or it's the letter "e", it becomes "buzz".
+# BUSINESS LOGIC
 
 def translated_character(character)
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -16,7 +16,6 @@ def translated_character(character)
 		"~BLEEP"
 	end
 end
-
 def translate(string)
 	character_index = 0
 	translated_phrase = "" 
@@ -26,4 +25,10 @@ def translate(string)
 	end
 	translated_phrase
 end
-puts translate("!AaZe") # >> Boing~Bloop~Bleep~Buzz~Buzz
+# puts translate("!AaZe") 
+# >> Boing~Bloop~Bleep~Buzz~Buzz
+
+# USER INTERACTION (UI)
+p "Enter the phase you need us to translate!"
+user_input = gets.chomp
+puts translate(user_input)
