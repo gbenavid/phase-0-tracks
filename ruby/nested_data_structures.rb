@@ -1,29 +1,41 @@
 hillarious_books = {
 	klien: {
-		author_full_name: "Jessie Klien"
-		book_title: "You'll grow out of it"
-		top_chapters: [
-			"Poodle vs. Wolf", 
-			"Tom Man", 
-			"Dale"]
-		pages: 291
-	}
+		book_title: "You'll grow out of it",
+		top_chapters: {
+			poodle_vs_wolf: 4, 
+			tom_man: 1,
+			dale: 3
+		},
+		rav_reviews: [
+			"New York Times",
+			"Amy Schumer"]
+	},
 	kalling: {
-		author_full_name: "Mindy Kalling"
-		book_title: "Is everyone hanging out without me (and other concerns)"
-		top_chapters: [
-			"Chubby for Life",
-			"When your not skinny this is what people want you to wear"] 
-	}
-	Amorusso:{
-		author_full_name: "Sophia Amoruso"
-		book_title: "#GIRLBOSS"
-		top_chapters: [
-			"Shoplifting (and Hitchhiking) Saved My Life",
-			"On Hirring, Staying Employeed, and Firing."
+		book_title: "Is everyone hanging out without me (and other concerns)",
+		top_chapters: {
+			cubby_for_life: 1,
+			what_to_wear: 7
+		},
+		rav_reviews: [
+			"Ben Aflack",
+			"Michelle Obama"
 		]
-
+	},
+	amoruso: {
+		book_title: "#GIRLBOSS",
+		top_chapters: {
+			going_to_jail: 4,
+			getting_hired: 11
+		},
+		rav_reviews: [
+			"Beyonce",
+			"The La Times"
+		]
 	}
-	# Mindy Kalling - Is everyone hanging out without me (and other concerns)
-	# Sophia Amorusso - Girl Boss
 }
+p hillarious_books[:klien][:rav_reviews][0]
+# ===> "New York Times" || Reaches into our object klien, then gets the data stored inside our array at index 0 
+p hillarious_books 
+
+
+
