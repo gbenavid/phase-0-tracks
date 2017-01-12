@@ -5,23 +5,31 @@ p "Please enter your (real) first name and we will protect your identity by gene
 person_name = gets.chomp
 def reverse(string)
 	string = string.downcase.split(' ').reverse
-	string = string.join(' ')
+	# "bena gina"
+	string = string.chars
 end
-def next_letter(string)
-	string.chars.map!{|letter| letter.next}.join('')
-end
-def condition(string)
-	# create a loop that iterates over the characters
-	# for each?
-	if (# character = " " (or a !))
-		# return " "
-	elsif # character = a vowel
-		# return the next vowel respectively
-	else (# if the character is 'aa' )
-		# change it to a
+def conditional (array)
+	vowles = ['aeiou']
+	constanats = ['bcdfghjklmnpqrstvwxyz']
+	constants_index = constanats.length
+	# Loop
+	until array.length < constants_index
+		for each { |letter| (letter == 'a' ? (letter = letter == 'e') : x ) }
 	end
 end
-puts next_letter(reverse(person_name))
+
+puts conditional(reverse(person_name))
+
+# create a loop that iterates over the characters
+# 	# for each?
+# 	if (# character = " " (or a !))
+# 		# return " "
+# 	elsif # character = a vowel
+# 		# return the next vowel respectively
+# 	else (# if the character is 'aa' )
+# 		# change it to a
+# 	end
+# end
 
 # Output => "Letu Gostu"
 
