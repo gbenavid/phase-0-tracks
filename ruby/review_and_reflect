@@ -16,6 +16,25 @@ An array is an object that has preassigned methods. Arrays start and end in [squ
 Hashes
 4. Define "hash" and describe the characteristics of a hash.
 
+A hash is essential a key and value pair. I like to think that it creates ‘rifts’ or waves within our otherwise ‘flat’ structures. The values are always going to have keys or symbols and both of those are going to be inside a hash. Which will be in {Curly braces}
+
 5. Give two original examples of data sets that a hash might be well-suited for.
+
+	food_pairing = {
+	wine: “cheese”,
+	peanut_butter: “jelly”,
+	eggs: “chorizo”
+	}
+
+Iteration
+6. Why is iteration useful?
+
+Iteration is useful in programing because often we find ourselves needing to iterate over
+A database or even a list in an array. Instead of feeding our programs one by one, line by line, we can set our iteration methods to the job for us (.map, .each, while & do loops…etc.)
+
+7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+
+
+
 
 
