@@ -26,7 +26,7 @@ def fib (number)
 	return fib_arr
 end
 # Output => an array of numbers
-p fib(1)
+p fib(100)
 
 
 

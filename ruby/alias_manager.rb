@@ -33,10 +33,17 @@ puts conditional(reverse(person_name))
 
 # Output => "Letu Gostu"
 
-# ---------- ATTEMPTED
-# def secret_name (name)
-# 	name = name.downcase.split(' ').reverse
-# 	name = name.join(' ').chars
-# 	name.map! { |letter| (letter == "a" ? letter = "e" : letter.next)}
-# end
-# p secret_name(name)
+def secret_name (name)
+	name = name.downcase.split(' ').reverse
+	name = name.join(' ').chars
+
+	name.map! { |letter| (letter == "a" ? letter == "e" : letter.next)}
+
+end
+p secret_name(name)
+
+
+
+
+
+

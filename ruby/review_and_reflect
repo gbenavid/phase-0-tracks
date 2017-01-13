@@ -1,0 +1,21 @@
+Data Structures
+1. Why are data structures useful in programming?
+
+In programing data structures are useful for storing data. Of course we can store data in a simple array, but sometimes our structures for data require a more complicated system. For example in regards to people, we would want to store multiple people in the same structure and within that structure we could assign different characteristics to our people respectively. And as programers, we would now be able to access that data with ease and we would be able to manipulate it on new levels.
+
+Arrays
+2. Define "array" and describe the characteristics of an array.
+
+An array is an object that has preassigned methods. Arrays start and end in [square brackets] and while they can have multiple lines of data within them, they are regarded as flat structures, meaning they can only take so much.
+
+3. Give two original examples of data sets that an array might be well-suited for.
+
+	array_explained = [“Arrays are flat”, 1, true, “but their still useful for simple 	structures and many other things.”]
+	
+	some_array_values = [1, “string”, false, nil]
+Hashes
+4. Define "hash" and describe the characteristics of a hash.
+
+5. Give two original examples of data sets that a hash might be well-suited for.
+
+
