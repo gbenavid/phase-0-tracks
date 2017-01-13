@@ -12,28 +12,20 @@ recipe = [
 	'Curry paste', 
 	'Pizza']
 
-	ingridient_list = ingridients.length
-	recipe_length = recipe.length
+ingridient_list = ingridients.length
+recipe_length = recipe.length
 
-	ingridient_list.times { |i| puts ingridients[i] }
-	puts ("~*~*")*7
-	recipe_length.times { |i| puts recipe[i] }
-
+ingridient_list.times { |i| puts ingridients[i] }
+puts ("~*~*")*7
+recipe_length.times { |i| puts recipe[i] }
 ingridients.each do |order, dry| 
-	puts "Mix #{order}, #{dry}"
+puts "Mix #{order}, #{dry}"
+end
+puts ("~*~*")*7
+recipe.map do |dish| recipe[3] = "Steamed Califlower"
 end
 
-recipe
-
-
-
-
-
-
-
-
-
-
+p recipe
 
 
 
