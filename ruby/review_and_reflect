@@ -1,0 +1,51 @@
+Data Structures
+1. Why are data structures useful in programming?
+
+In programing data structures are useful for storing data. Of course we can store data in a simple array, but sometimes our structures for data require a more complicated system. For example in regards to people, we would want to store multiple people in the same structure and within that structure we could assign different characteristics to our people respectively. And as programers, we would now be able to access that data with ease and we would be able to manipulate it on new levels.
+
+Arrays
+2. Define "array" and describe the characteristics of an array.
+
+An array is an object that has preassigned methods. Arrays start and end in [square brackets] and while they can have multiple lines of data within them, they are regarded as flat structures, meaning they can only take so much.
+
+3. Give two original examples of data sets that an array might be well-suited for.
+
+	array_explained = [“Arrays are flat”, 1, true, “but their still useful for simple 	structures and many other things.”]
+	
+	some_array_values = [1, “string”, false, nil]
+Hashes
+4. Define "hash" and describe the characteristics of a hash.
+
+A hash is essential a key and value pair. I like to think that it creates ‘rifts’ or waves within our otherwise ‘flat’ structures. The values are always going to have keys or symbols and both of those are going to be inside a hash. Which will be in {Curly braces}
+
+5. Give two original examples of data sets that a hash might be well-suited for.
+
+	food_pairing = {
+	wine: “cheese”,
+	peanut_butter: “jelly”,
+	eggs: “chorizo”
+	}
+
+Iteration
+6. Why is iteration useful?
+
+Iteration is useful in programing because often we find ourselves needing to iterate over
+A database or even a list in an array. Instead of feeding our programs one by one, line by line, we can set our iteration methods to the job for us (.map, .each, while & do loops…etc.)
+
+7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+	* Example, you have a database of cars, and you need to find the cars that have 	been built between the years (2011-2016) because they have all been recalled. 		That’s allot of cars to find, so we’re going to iterate through our database and 	ask our function to return all the defunct cars.  
+
+Blocks
+8. What is a block?
+I struggled a bit with this question as I neared the end of this week’s material. But now I have settled on understanding blocks as simple structures that can be passed through methods. Block structure is different from a methods’. Also, they are portable and easy to just drop into your code when you need them, you can easily define variables using the |pipes| and defining a variable right before you call your block.
+
+9. What is a block parameter, and where does its value come from?
+A bock parameter in the example below would be ‘x’ you call x by just dropping it in there when you need it, it comes from you, it doesn’t have to be ‘x’ it can be whatever you want it to be, but you should try and make it relevant to what your code is working on. It’s kind of like the iterator/ index. 
+
+do |x|
+  puts x
+  puts (x * 2)
+  puts (x * 4)
+end
+
+
