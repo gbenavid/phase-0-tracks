@@ -2,6 +2,7 @@
 # Here we want to collect intelligence on candidate(s). We will make use of this information latter on when we determine wheather s/he is a vampire or not. 
 p "How many people are scheduled to interview today?"
 employees_to_be_interviewed = gets.to_i
+
 until employees_to_be_interviewed == 0
   p "Whats your name?"
   sirname = gets.chomp
@@ -9,7 +10,8 @@ until employees_to_be_interviewed == 0
     sirname = false
   elsif sirname == "Tu Fang"
     sirname = false
-  else sirname = true
+  else 
+    sirname = true
   end
 
   allergic_reactions = false 
@@ -65,7 +67,8 @@ until employees_to_be_interviewed == 0
   Likes garlic: #{likes_garlic}, 
   Wants healthcare: #{wants_healthcare}
   ----"
-  #Name: #{sirname}" HELP~~~~~~~can't access value inside a boolean~~~~~~~~~~~~HELP #{DOB} ~~~~~~~HELP.
+ 
+  # Name: #{sirname}" HELP~~~~~~~can't access value inside a boolean~~~~~~~~~~~~HELP #{DOB} ~~~~~~~HELP.
 
   # RELEASE 2: Conditional Logic Is this person a vampire, or what??? Let's find out!
   if age_isvalid && likes_garlic && wants_healthcare && sirname
