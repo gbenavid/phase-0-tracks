@@ -93,8 +93,28 @@ p secret_name(name)
 METHOD
 	IS IT A vowel
 
+#--------STARTING OVER----------
+# Input => "Felicia Torres"
 
+# Steps:
+# * Swap first and last name
+def split_reverse (name_str)
+  name_str.downcase.split("").reverse.join 
+end # ["torres felicia"]
 
+# * Change all the vowels to the next vowel
+def next_vowels (array_of_letters)
+  vowels = ["aeiou"]
+  # for each str_1 print vowel
+  str_1.each {|letter|
+      puts "Now the block p arameter has a value of the currnt array item: #{item}" }
+  end
+end
+# * Consonants to next consonant
+
+split_reverse("Felicia Torres") 
+# ["torres", "felicai"]
+# Output => "Vussit Gimodoe"
 
 
 
