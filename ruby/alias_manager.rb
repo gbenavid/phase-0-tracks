@@ -116,7 +116,69 @@ split_reverse("Felicia Torres")
 # ["torres", "felicai"]
 # Output => "Vussit Gimodoe"
 
+~~~~~MORE NOTES~~~~~~~
+# person_name = "Gina Kim"
+# def to_char(string)
+# 	string = string.downcase.split('')
+# 	#string = string.chars
+# end WORKING CODE THAT EXCECUTES B E N A  G I N A 
 
+# make a helper function to compare it to vowles
+
+# I have an array that I want to iterate over and compare it ot another array that I will iterate over. Probaby have to pass a block of code through it
+person_name = ['b', 'e', 'n', 'a', ' ', 'g', 'i', 'n', 'a']
+person_name.each do |letter|
+  if letter == 'a'
+    letter.upcase
+  else 
+    letter
+  end
+end
+
+
+# vowles = ['a', 'e', 'i', 'o', 'u']
+# def is_vowel (array, vowles)
+#   array.each {|letter| 
+#   letter = vowles ? (letter = vowles) : letter}
+# end
+# is_vowel(person_name, vowles)
+#is_vowel(['b', 'e', 'n', 'a', ' ', 'g', 'i', 'n', 'a'])
+
+
+
+
+
+
+-------------------------
+# #map! can't touch a hash --you simply can't use it.
+		
+# animal_crackers = [
+# 	'bunny' => 'intact',
+# 	'camel' => 'intact',
+# 	'elephant' => 'intact',
+# 	'giraffe' => 'intact'
+# ]
+# animal_crackers.each do |animal, status| 
+# 	puts "The T-Rex has bitten the #{animal} head off! and is now #{status}"
+# end
+# ~~~~~~.Times Make it look pretty
+# dinos = ["T-rex", "brontosaurus", "pterodactyl"]
+# number_of_dinos = dinos.length
+# number_of_dinos.times { |i| puts dinos[i] }
+
+# do |x|
+#   x = "golly"
+#   puts x
+#   puts (x * 2)
+#   puts (x * 4)
+# end
+# dogs = ["Link", "Trigger", "Martini", "Avain"]
+#     dogs.each do |doggie|
+#         puts ("#{doggie}") * 2
+#     end
+# # end
+# ["a","b","c","d"].each { |item| puts "Now the block parameter has a value of the current array item: #{item}" }
+#~~~~~~~~NOTES~~~~~~~~
 
 
 
