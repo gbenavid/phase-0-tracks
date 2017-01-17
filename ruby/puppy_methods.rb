@@ -13,7 +13,7 @@ class Puppy
 
   def roll_over 
     puts "*rolls over*"
-  end
+    end
 
   def dog_years (age)
   	dog_age = age*7
@@ -24,12 +24,11 @@ class Puppy
   	dog_name.capitalize!
   	puts "#{dog_name}, high-five!"
   	puts "*high fives*"
-  end
+    end
 
   def initialize
   	puts "Initializing new puppy instance.."
-  end
-
+    end
 end
 #DRIVER CODE for Puppy Class
 roxy = Puppy.new
