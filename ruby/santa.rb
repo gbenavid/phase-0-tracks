@@ -1,5 +1,8 @@
 # Here I'm defining a class called 'Santa' along with some methods that we'll see later in the driver code.
 class Santa
+	# Syntactic Sugar
+	attr_reader :ethnicity, :age
+	attr_accessor :gender
 	def initialize (gender, ethnicity, reindeer_name)
 		puts "Initializing Santa instance ..."
 		@reindeer_ranking = [
@@ -30,20 +33,6 @@ class Santa
 		puts "Reindeer Ranking: #{@get_mad_at}"
 		puts "~*~*~*~*~*"		
 		end #PRINTING DATA
-	#SETTER METOHDS
-	def gender
-		@gender
-		end
-	def gender=(new_gender)
-		@gender = new_gender
-		end
-	#GETTER METHODS:
-	def age
-		@age		
-		end
-	def ethnicity
-		@ethnicity		
-		end
 end
 # Driver Code
 santas = []
