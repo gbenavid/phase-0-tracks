@@ -29,13 +29,21 @@ class Santa
 		puts "Gender: #{@gender}"
 		puts "Reindeer Ranking: #{@get_mad_at}"
 		puts "~*~*~*~*~*"		
-		end
+		end #PRINTING DATA
+	#SETTER METOHDS
 	def gender
 		@gender
 		end
 	def gender=(new_gender)
 		@gender = new_gender
-	end
+		end
+	#GETTER METHODS:
+	def age
+		@age		
+		end
+	def ethnicity
+		@ethnicity		
+		end
 end
 # Driver Code
 santas = []
@@ -59,12 +67,11 @@ example_ethnicities = [
 example_genders.length.times do |i|
   santas << Santa.new(example_genders[i], example_ethnicities[i], "Vixen").about
  end
-
+# Testing my work for getter & setter methods...
 st_nick = Santa.new("Cis Male", "White", "Vixen")
-puts "A #{st_nick.gender} Santa has been created"
-st_nick.about
-st_nick.gender = "Gender Queer"
-st_nick.about
-
+puts "A #{st_nick.gender} Santa has been created, but will soon reasign her gender to 'Female'"
+st_nick.gender = "Female"
+st_nick.about # after gender is reasigned
+puts "Our santa is #{st_nick.age} years of age, and ethinically is recognized to be: #{st_nick.ethnicity}"
 
 
