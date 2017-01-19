@@ -1,6 +1,4 @@
-# Here I'm defining a class called 'Santa' along with some methods that we'll see later in the driver code.
 class Santa
-	# Syntactic Sugar
 	attr_reader :ethnicity, :age
 	attr_accessor :gender
 
@@ -38,17 +36,15 @@ class Santa
 end
 
 # DRIVER CODE
-	# Creating santas by pairing them to the corresponding indices between the two arrays (genders & ethnicities)...
-		# santas = []
-		example_genders = [
-			"Agender", 
-			"Female", 
-			"Bigender", 
-			"Male", 
-			"Androgyne", 
-			"Gender Fluid", 
-			"N/A"]
-		example_ethnicities = [
+example_genders = [
+	"Agender", 
+	"Female", 
+	"Bigender", 
+	"Male", 
+	"Androgyne", 
+	"Gender Fluid", 
+	"N/A"]
+example_ethnicities = [
 			"Black", 
 			"Latino", 
 			"White", 
@@ -56,17 +52,6 @@ end
 			"prefer not to say", 
 			"Unicorn", 
 			"N/A"]
-		# example_genders.length.times do |i|
-		#   santas << Santa.new(example_genders[i], example_ethnicities[i], "Vixen").about
-		#  end
-	# Testing my work for getter & setter methods...
-		# st_nick = Santa.new("Cis Male", "White", "Vixen")
-		# puts "A #{st_nick.gender} Santa has been created, but will soon reasign her gender to 'Female'..."
-		# st_nick.gender = "Female"
-		# st_nick.about # after gender is reasigned
-		# puts "Our santa is #{st_nick.age} years of age, and ethinically is recognized as: #{st_nick.ethnicity}"
-
-	# Creating allot of Santas:
 santa_con = []
 200.times do 
 	santa_con << Santa.new(example_genders.sample, example_ethnicities.sample, "Vixen", rand(141)).about
