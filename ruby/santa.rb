@@ -45,13 +45,13 @@ example_genders = [
 	"Gender Fluid", 
 	"N/A"]
 example_ethnicities = [
-			"Black", 
-			"Latino", 
-			"White", 
-			"Japanese-African", 
-			"prefer not to say", 
-			"Unicorn", 
-			"N/A"]
+	"Black", 
+	"Latino", 
+	"White", 
+	"Japanese-African", 
+	"prefer not to say", 
+	"Unicorn", 
+	"N/A"]
 santa_con = []
 200.times do 
 	santa_con << Santa.new(example_genders.sample, example_ethnicities.sample, "Vixen", rand(141)).about
