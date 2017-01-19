@@ -1,5 +1,5 @@
 class TodoList
-	attr_accessor :array #Accounts for reading && writing o/side of the method(s)w/in your class
+	attr_accessor :array 
 	def initialize (array)
 		@array = array	
 		end
@@ -16,32 +16,3 @@ class TodoList
 		return @array.at(i)
 	end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
