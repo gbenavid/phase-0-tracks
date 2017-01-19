@@ -1,7 +1,4 @@
 module Shout
-	def self.yell_happily(words)
-		# words + "!!!" + '😆'
-		# end
 	def but_wait! (words)
 		puts "BUT WAIT... THERE'S MORE, " + words.upcase + "!!!"
 	end
