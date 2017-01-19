@@ -12,8 +12,8 @@ class TodoList
 	def delete_item (finished_chore)
 		return @array.delete(finished_chore)
 		end
-	def get_item(index_number)
-		return @array.index(index_number)
+	def get_item(i)
+		return @array.at(i)
 	end
 end
 
