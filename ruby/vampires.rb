@@ -16,8 +16,17 @@ class Fact_checking
   end
 end
 # UI: Ask the user for the following information
+response = Fact_checking.new
 puts "What's your name?"
+sirname = response.valid_name(gets.chomp)
+
 puts "How old are you?"
+age = gets.chomp.to_i
 puts "What year were you born?"
+response.valid_age(age, gets.chomp.to_i) 
+
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
+response.likes_garlic?(gets.chomp)
+
 puts "Would you like to enroll in the company’s health insurance?"
+response.healtcare(gets.chomp)
