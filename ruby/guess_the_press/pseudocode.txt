@@ -1,0 +1,53 @@
+CLASS for a word-guessing game 
+	initialize:
+		@word
+		@guess
+
+	word_to_dashes/// updating_word
+		constantly updates dashes based on guesses 
+
+	out_of_guesses —> 
+		number of guesses allowed is <= “word”.length*2 (true or false value)
+
+	letter_is_guessed—>
+		letter is included in “word” =
+			 true
+		else
+			false
+
+	word_guessed_correctly —>
+		if @guess == ‘word’
+			puts “Yay! You Won this round!”
+		
+END- class
+
+UI
+——
+Puts “Welcome to Guess the Press”
+Puts “Player 1, enter a word for your opponent to guess. Don’t let them see!” — initializes word for game 
+Word = gets.chomp —  [word = Guessing_game.new(gets.chomp)].   user_1 input— “word”
+
+DRIVER CODE 
+
+-WHILE- !out_of_guesses && !word_guessed_correctly  —if you still have guess & word is unsolved
+	
+	puts “_ _ _ _ _ _ ” 	— A call to a method that shows dashes for letters in word. 
+	^^ updates as user_2 guesses values in word 
+	Puts “Guess a letter:” — *Keeps prompting user_2 to guess a letter
+	 
+	guess = gets.chomp — get’s user_2 string input
+	—LOGIC—
+	if out_of_guesses 		—if the user is out of guesses end the game
+		puts “Sorry, your out of guesses this time, better luck next time.”
+	 if !out_of_guesses && guessed_a_letter—still has guesses & guesses a letter in the word
+		update word_dashes and 
+		puts “Way to go! The word you need to guess has the letter #{guessed_a_letter}” 
+		puts “#{updated letter to dashes ‘hint’}”
+	If !out_of_guesses && !guessed_a_letter— 
+		puts “No, there isn’t a #{guessed_letter}.”
+	if word_guessed_correctly 
+		puts “Congratulations! You pressed & guessed the word, #{put entire word} and won!!”
+	—END— Logic 
+	
+END- While
+———
