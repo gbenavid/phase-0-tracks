@@ -1,16 +1,3 @@
-1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
-
-classes are containers for methods. They can have instant variables that are variables that can be used and or modified throughout the entire class. Instant methods are similar, only it’s a method. Sometimes the state of an instant variable or method can be abbricvaited into syntactic sugar to better help other developers understand your code. The behaviors of a class vary based on the methods/ instant variables set inside it. They usually al have some correlation to one another. Their state can be called using the .(dot)notation
-
-2. What are attributes?: These are getters and setters, they are accessible within the class and sometimes outside the class depending on the attribute. 
-
-3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.: One in real life object might be a hotel. The class might hold an instant variables called hotel_name. This would be a reader, and would not be writable outside of the class. Another example of our hotel might be a method called current_guests which would also be an attribute, only this one would most likely be readable and writable from outside of the class. Making it attr_assessor.
-
-4. What is the purpose of the initialize method? When does it run?: The purpose of an initializing method is to set your ‘syntactic sugar’ to values. If you want them to have values other than themselves. If runs when you call it within the method. Or outside the method when you use the .notation
-
-5. What are modules?: These are like containers for classes. Helps structure and organize your code and you can set attributes inside them
-
-6. What are the different ways you can use a module?: Modules can be used to give more structure to a series of classes.
 
 
 
