@@ -1,10 +1,15 @@
+// Pass your reversed function a parameter(string)
 function reversed (str){
+	// Set an empty string that we will use latter on
   var reverse = '';
+  // Loop through the string backwards
   for (var i = str.length; i > -1; i--){
+  // Keep adding your letter to the empty string
   reverse += str[i];
   }
   console.log(reverse);
 }
+// Ignite your function like so:
 reversed("Kitty")
 
 // How to count down:
