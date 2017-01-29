@@ -1,6 +1,6 @@
 class A_word_guessing_game
-	attr_reader :is_over, :count
-	attr_accessor :guessing, :secret_word
+	attr_reader :count
+	attr_accessor :guessing, :secret_word, :is_over
 	
 	def initialize (secret_word)
 		@secret_word = secret_word
@@ -27,8 +27,6 @@ class A_word_guessing_game
 	def guessed_word
 		if @guessing == @secret_word
 			@is_over = true
-		else
-			false
 		end
 	end
 
@@ -53,7 +51,12 @@ puts "Player 2: Once you think you've guessed the letter entirely, '\n' type the
 
 # DRIVER CODE
 until game.is_over || !game.out_of_guesses
-	puts "Guess a letter:" # I think program will die here b/c method dies
+	if game.guessed_word
+		puts "Congratulations! You Won!!!"
+		return game.is_over = true
+	end
+	
+	puts "Guess a letter:" 
 	guess = gets.chomp
 # LOGIC	 
 	if game.guessed_word
@@ -66,6 +69,44 @@ until game.is_over || !game.out_of_guesses
 		puts "Sorry, I didn't get that."
 	end
 end
+# CLASS
+# att_accessor: :hidden_word
+# att_reader: :is_over, :guessed_word 
+	# Initialized method
+	  # word from Player 1
+	  # guess from Player 2
+	  # game is over
+	  # guessed word
+	  # count
+	# totals guess attempts
+		# Guesses are limited, and the number of guesses available is related to the length of the word.
+		# Repeated guesses do not count against the user.
+		# checks count and compares it to the length of the string * 2
+	# made_guess method (letter guessed)
+		# adds a tick to notify the program that they have used one of their guesses
+		# checks to see if the letter guessed is inside the secret word
+#UI
+	# Greets players
+	# initialize a new class instance
+	# Player 1 can enter a hidden word
+	# pass hidden word through a method in our class instance
+	# DRIVER CODE
+		# LOOP
+		# Until the game is over || the user has guessed the word
+		# LOGIC/ CONTROL FLOW
+			# check to see if word == accumulated guesses run guess through a method in the series that checks to see if the word is eq. to guesses.
+				
+			# check to see if the player still has guesses. 
+			# Ask Player 2 to take a guess
+			# if the guess returns true from the made_guess method
+				# puts "(e.g: _ c _ _ _ a )" or some form of continual feedback
+			# and a taunting message if they lose.
+# if the user has guessed word congratulate them
+# if the game is over taught them about losing.
+
+# Thank the users for playing and ask them to play again
+
+
 
 
 
