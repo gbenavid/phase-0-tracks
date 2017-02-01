@@ -1,0 +1,89 @@
+SELECT * FROM account_holders;
+1|Kanye West|6000|1
+2|Oprah Winfrey|100000|2
+3|Ashton Kutcher|500000|3
+4|Too Short|200000|3
+5|MC Hammer|1000|2
+6|Rachel Maddow|300000|1
+7|Gayle King|500000|3
+8|Bigge Smalls|20000|2
+9|Lady Gaga|70300|3
+10|CeeLo Green|90000|2
+11|DJ Khaled|90000|1
+12|Drake|60000|2
+13|Kesha|1500|1
+14|Ellen Degeneres|12500|1
+15|Tyra Banks|90800|3
+
+UPDATE account_holders SET membership=1 WHERE id=2;
+SELECT * FROM account_holders;
+1|Kanye West|6000|1
+
+2|Oprah Winfrey|100000|1
+^^^^^^^^^^^^^^^^^^^^^^^^
+Ms. Winfrey has upgraded to a ‘Gold’ membership. 
+. . . [omitted data]. . . 
+
+SELECT * FROM account_holders, membership_id WHERE account_holders.membership = membership_id.id;
+
+1|Kanye West|6000|1|1|Gold
+2|Oprah Winfrey|100000|1|1|Gold
+3|Ashton Kutcher|500000|3|3|Bronze
+4|Too Short|200000|3|3|Bronze
+5|MC Hammer|1000|2|2|Silver
+6|Rachel Maddow|300000|1|1|Gold
+7|Gayle King|500000|3|3|Bronze
+8|Bigge Smalls|20000|2|2|Silver
+9|Lady Gaga|70300|3|3|Bronze
+10|CeeLo Green|90000|2|2|Silver
+11|DJ Khaled|90000|1|1|Gold
+12|Drake|60000|2|2|Silver
+13|Kesha|1500|1|1|Gold
+14|Ellen Degeneres|12500|1|1|Gold
+15|Tyra Banks|90800|3|3|Bronze
+
+SELECT account_holders.membership, membership_id.membership FROM account_holders JOIN membership_id ON account_holders.membership = membership_id.id;
+1|Gold
+1|Gold
+3|Bronze
+3|Bronze
+2|Silver
+1|Gold
+3|Bronze
+2|Silver
+3|Bronze
+2|Silver
+1|Gold
+2|Silver
+1|Gold
+1|Gold
+3|Bronze
+
+
+DELETE FROM account_holders
+   ...> WHERE holdings=1000;
+sqlite> SELECT * FROM account_holders;
+1|Kanye West|6000|1
+2|Oprah Winfrey|100000|1
+3|Ashton Kutcher|500000|3
+4|Too Short|200000|3
+6|Rachel Maddow|300000|1
+7|Gayle King|500000|3
+8|Bigge Smalls|20000|2
+9|Lady Gaga|70300|3
+10|CeeLo Green|90000|2
+11|DJ Khaled|90000|1
+
+SELECT membership_id.id, account_holders.membership, membership_id.membership
+FROM membership_id
+INNER JOIN account_holders
+ON membership_id.id=account_holders.id;
+1|1|Gold
+2|1|Silver
+3|3|Bronze
+SELECT account_holder.membership, membership_id.membership
+FROM account_holders
+RIGHT JOIN membership_id 
+ON account_holders.id = membership_id.id
+
+>Error: RIGHT and FULL OUTER JOINs are not currently supported
