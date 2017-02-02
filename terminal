@@ -1,0 +1,17 @@
+phase-0-tracks (databases *) :> mkdir zoo
+
+phase-0-tracks (databases *) :> git init
+Reinitialized existing Git repository in /Users/gina/Documents/dev_documents/devBootCamp/phase-0-tracks/.git/
+
+phase-0-tracks (databases *) :> touch koalas.md monkeys.md chipmunks.md
+
+phase-0-tracks (databases *) :> subl koalas.md monkeys.md chipmunks.md 
+
+phase-0-tracks (databases *) :> git add --all
+
+phase-0-tracks (databases +) :> git commit -m "Initial commit"
+[databases 1a06561] Initial commit
+ 4 files changed, 12 insertions(+)
+ create mode 100644 chipmunks.md
+ create mode 100644 koalas.md
+ create mode 100644 monkeys.md
