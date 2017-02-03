@@ -1,42 +1,61 @@
-# ----- The Program -----
-# Note: Use symbols
-p "Please type carefully when entering the following information about your client."
-# Promt the user for all of this information.
-  # client: 
-  # name, 
-  # age, 
-  # number of children, and
-  # decor theme
-p "Name of client:"
-client_name = gets.chomp
-p "Age:"
-age = gets.chomp
-p "How many kids does your client have? (enter 0 if none)"
-# Convert any user input to the appropriate data type. 
-kids = gets.chomp.to_i
-p "The decor is a custom theme (true/false)?"
-custom_theme = gets.chomp
-
-# -----client data in an array with key values-----
-client_data = {
-  :client_name => client_name,
-  :age => age,
-  :kids => kids,
-  :custom_theme => custom_theme}
-# Print the hash back out to the screen when the designer has answered all of the questions.
-p client_data
-p "^ ^ ^ ^ ^ ^ Does all that information look right to you?"
-p "If all the information is correct type 'none', otherwise press enter"
-response = gets.chomp
-if response == 'none'
-  p "Okay great! Here are your final results:"
-elsif     
-  p "Okay, what feild needs a correction (e.g client_name)?"
-  correct_sym = gets.chomp.to_sym
-  p "What would you like it to say instead?"
-  correct_value = gets.chomp
-  #update corresonding key
-  client_data[correct_sym] = correct_value
+puts "Welcome to the Client2Hash Mixer 2000™! \nAnswer the following questions about your client and a data structure will be created for them."
+client = {
+}
+puts "What id your clients name?"
+client[:name]= gets.chomp
+puts "How old is this client?"
+client[:age]= gets.chomp.to_i
+puts "How many children does your client have?"
+client[:children]= 
+  if gets.chomp != '0' 
+    true
+  else
+    false      
+  end
+puts "What decor theme is your client interested in?"
+client[:decor_theme]= gets.chomp
+puts "~*"*20
+puts "YOUR HASH HAS NOT BEEN FINALIZED."
+p client
+puts "~*"*20
+puts "Would you like to make any corrections to the hash you've created?\nType 'yes' or 'no'."
+if gets.chomp == 'yes'
+  puts "What field would you like to update?"
+  symbol = gets.chomp.to_sym
+  puts "Please type in the correct value:"
+    client[symbol]=gets.chomp
+else
+  puts "The Client2Hash Maker 2000™ will proceed with the creation of your hash..."
 end
-# Print the latest version of the hash, and exit the program.
-p client_data
+puts "__"*20
+p client
+puts "__"*20
+=begin
+puts "Here is a completed job application from a candidate"
+puts "----"*12
+puts "INTERIOR DESIGNER JOB APPLICATION"
+application = {
+  full_name: "Gina Benavidez",
+  address: "1000 Pine St. APT 1, Leekwell, OH, 22140",
+  email: "gb@gmail.com",
+  phone: "123.123.1234",
+  "Favorite shade of blue" => "Royal",
+  "Wallpaper preferences" => [0, 1],
+  "Ombre is:" => 2
+}
+p application
+puts "----"*15
+puts "We can combine hashes together:"
+puts application[:address] + application[:phone]
+puts "We can also store keys in variables and then access the variable:"
+client = application[:full_name]
+puts client
+puts "And we can modify those created variables, and use them to manipulate our hash:"
+client = "Brenden Stone"
+application[:full_name] = client
+puts application[:full_name]
+puts "Finally, we can also add key value pairs:"
+client[:was_hired]=true
+puts "----"*15
+p application
+=end
