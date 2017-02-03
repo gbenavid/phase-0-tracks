@@ -1,0 +1,21 @@
+1. *What is 'shell'? What is 'Bash'?*
+  * Shell and bash are command languages.
+
+## Describe what the following commands do:
+  * pwd :prints working directory
+  * ls :lists all files and directories
+  * mv :move file
+  * cd :change directory
+  * touch :create file
+  * mkdir :creates a directory
+  * rm :removes a file
+  * help :lists all available commands
+  * find :finds a file or directory
+  * grep :finds an occurrence within a file 
+2. *Git*
+  * *Version control* is used by developers to work on individual features of a project without jeopardizing the work that's on the master branch.
+  * A *commit* is used when a small bit of progress has been made on a feature. It's followed by a message to help other developers understand and track progress. A good message is concise and detailed.
+  * A *branch* is a replica of the master. Work done here will not appear on the master until it is merged. 
+  * The 3 stages of a git change are: data is modified, git add file_name, and git commit -m "your message here."
+4. GitHub
+  * Git is a distributed peer-peer version control system. While GitHub is a web-based Git repository hosting service. GitHub has a few additional features and connects developers. 
