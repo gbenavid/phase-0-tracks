@@ -1,10 +1,5 @@
-# Uncomment the calls to catch these methods red-handed.
+swapcase = "iNvEsTiGaTiOn".swapcase
 
-# When there's more than one suspect who could have
-# committed the crime, add additional calls to prove it.
-
-# "iNvEsTiGaTiOn".<???>
-# => “InVeStIgAtIoN”
 
 # "zom".<???>
 # => “zoom”
