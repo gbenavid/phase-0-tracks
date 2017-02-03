@@ -29,12 +29,11 @@ puts "~*"*6 + " culprit 7 was caught?"
 puts "The mystery of the missing first letter".reverse.chop.reverse.eql? "he mystery of the missing first letter"
 puts "The mystery of the missing first letter".slice(1..39).eql? "he mystery of the missing first letter"
 
+puts "~*"*6 + " culprit 8 was caught?"
+puts "Elementary,    my   dear        Watson!".squeeze(" ").eql? "Elementary, my dear Watson!"
 
-# "Elementary,    my   dear        Watson!".<???>
-# => "Elementary, my dear Watson!"
-
-"z".ord
-# => 122 
+puts "~*"*6 + " culprit 9 was caught?"
+puts "z".ord.eql? 122 
 # 122 is the integer ordinal of z.
 
 "How many times does the letter 'a' appear in this string?".count "a"
