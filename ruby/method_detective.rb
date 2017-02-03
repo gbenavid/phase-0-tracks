@@ -36,5 +36,5 @@ puts "~*"*6 + " culprit 9 was caught?"
 puts "z".ord.eql? 122 
 # 122 is the integer ordinal of z.
 
-"How many times does the letter 'a' appear in this string?".count "a"
-# => 4
+puts "~*"*6 + " culprit 10 was caught?"
+puts "How many times does the letter 'a' appear in this string?".count("a").eql? 4
