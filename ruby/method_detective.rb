@@ -5,15 +5,13 @@ puts "zom".gsub(/[o]/, "oo").eql? "zoom"
 puts "zom".insert(1, "o").eql? "zoom"
 puts "zom".replace("zoom").eql? "zoom"
 
-"enhance".center(20) 
-# => "    enhance    "
+puts "enhance".center(15).eql? "    enhance    "
 
-"Stop! You’re under arrest!".upcase 
-# => "STOP! YOU’RE UNDER ARREST!"
+puts "Stop! You’re under arrest!".upcase.eql? "STOP! YOU’RE UNDER ARREST!"
 
-"the usual".concat(" suspects")
-"the usual" << " suspects" 
-#=> "the usual suspects"
+puts "the usual".concat(" suspects").eql? "the usual suspects"
+puts ("the usual" << " suspects").eql? "the usual suspects"
+puts "the usual".insert(-1, " suspects").eql? "the usual suspects"
 
 " suspects".reverse.concat("lausu eht").reverse
 # => "the usual suspects"
