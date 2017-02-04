@@ -132,6 +132,3 @@ p hillarious_books[:amoruso][:top_chapters][:going_to_jail]
 p hillarious_books[:amoruso][:book_title].downcase 
 # ===> #girlboss || We access the book titile in the ameroso object inside our hillarious_books data structure and preform the downcase method on our string. 
 p hillarious_books[:klien][:rav_reviews].reverse
-
-
-
