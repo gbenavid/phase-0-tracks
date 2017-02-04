@@ -1,3 +1,54 @@
+
+my_friends = {
+	kindergarden: [
+		'Rosa', 
+		'Jasmin', 
+		'Katie'
+	],
+	middle_school: [
+		'Skylar',
+		'Brandi'
+	],
+	highschool: [
+		'Skylar',
+		'Brandi',
+		'Caitlin'
+	],
+	college: [
+		'Reema',
+		'Aneesa',
+		'Saeed',
+		'Mourat',
+		'Andrew',
+		'Dan',
+		'Tanya',
+		'Ahmed'
+	],
+	bffs: {
+		names: [
+			'Carrie', 
+			'Evelyn', 
+			'Amanda'
+		],
+		still_friends: true,
+		hours_together: 100,
+		favorite_moment: "Meeting Carrie for the first time."
+	}
+}
+p my_friends
+puts "*~*~*~"*8
+puts "UPDATED HASH:"
+my_friends[:kindergarden].push('Nelly')
+my_friends[:middle_school].push('Evelyn')
+my_friends[:college].pop
+my_friends[:college][3]="Mourad"
+p my_friends
+puts "*~*~*~"*8
+# EXTRACTING INFORMATION
+puts my_friends[:bffs][:favorite_moment]
+puts my_friends[:bffs][:names][2]
+puts my_friends[:college].last
+
 hillarious_books = {
 	klien: {
 		book_title: "You'll grow out of it",
@@ -9,7 +60,45 @@ hillarious_books = {
 		rav_reviews: [
 			"New York Times",
 			"Amy Schumer",
-			"President Obama"]
+			"President Obama"
+		]
+	},
+	kalling: {
+		book_title: "Is everyone hanging out without me (and other concerns)",
+		top_chapters: {
+			cubby_for_life: 1,
+			what_to_wear: 7
+		},
+		rav_reviews: [
+			"Ben Aflack",
+			"Michelle Obama"
+		]
+	},
+	amoruso: {
+		book_title: '#GIRLBOSS',
+		top_chapters: {
+			going_to_jail: 4,
+			getting_hired: 11
+		},
+		rav_reviews: [
+			"Beyonce",
+			"The La Times"
+		]
+	}
+}
+hillarious_books = {
+	klien: {
+		book_title: "You'll grow out of it",
+		top_chapters: {
+			poodle_vs_wolf: 4, 
+			tom_man: 3,
+			dale: 1
+		},
+		rav_reviews: [
+			"New York Times",
+			"Amy Schumer",
+			"President Obama"
+		]
 	},
 	kalling: {
 		book_title: "Is everyone hanging out without me (and other concerns)",
