@@ -11,14 +11,14 @@ def search_array(array, value)
 end
 # DRIVER CODE
 arr = [42, 89, 23, 1]
-# p search_array(arr, 42)
-# p search_array(arr, 24)
+p search_array(arr, 42)
+p search_array(arr, 24)
 def fib (number)
-	fib_arr = [0, 1]
-	(number -2).times do	
-	fib_arr << fib_arr[-1].to_i + fib_arr[-2].to_i
-	end
-	return fib_arr
+  fib_arr = [0, 1]
+  (number -2).times do	
+    fib_arr << fib_arr[-1].to_i + fib_arr[-2].to_i
+  end
+  return fib_arr
 end
 # Release 2
 # Input => [1, 3, 4, 12, 5, 2]
@@ -41,6 +41,3 @@ def bubble_sort(array)
   array # return an array
 end
 # Output => [1, 2, 3, 4, 5, 12]
-
-
-
