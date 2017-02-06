@@ -20,6 +20,9 @@ def fib (number)
   end
   return fib_arr
 end
+# DRIVER CODE
+# p fib(6) == [0,1,1,2,3,5]
+# p fib(100).last == 218922995834555169026
 # Release 2
 # Input => [1, 3, 4, 12, 5, 2]
 def bubble_sort(array)
