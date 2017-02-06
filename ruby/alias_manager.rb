@@ -1,59 +1,53 @@
-# INPUT = ("First Last")
-class AliasManager
-	def initialize(name)
-		@name = name
-	end
-	def generate_alias
-		swapped_vowels = vowel_swapper
-		swapped_consonatns = consonant_swapper(swapped_vowels)
-		swap_first_and_last = name_swapper(swapped_consonatns)
-	end
-	def vowel_swapper
-		chopped_name = @name.downcase.chars
-		vowel_swapped_name = ""
-		vowels = ['a','e','i','o','u']
-
-		chopped_name.each do |character|
-			if vowels.include?(character)
-				if character  == 'u'
-					vowel_swapped_name << 'a'
-				else
-					current_index = vowels.index(character)
-					next_index = current_index + 1
-					next_letter = vowels[next_index]
-					vowel_swapped_name << next_letter
-				end
-			else
-				vowel_swapped_name << character
-			end
-		end
-		vowel_swapped_name
-	end 
-	def consonant_swapper (string)
-		chopped_name = string.downcase.chars
-		consonant_swapped_name = ""
-		consonants = ['b','c','d','f','g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
-
-		chopped_name.each do |character|
-			if consonants.include?(character)
-				if character  == 'z'
-					consonant_swapped_name << 'b'
-				else
-					current_index = consonants.index(character)
-					next_index = current_index + 1
-					next_letter = consonants[next_index]
-					consonant_swapped_name << next_letter
-				end
-			else
-				consonant_swapped_name << character
-			end
-		end
-		consonant_swapped_name
-	end
-	def name_swapper (string)
-		string.split(" ").reverse.join(" ")	
-	end
+name = ""
+collected_names = {}
+# UI
+puts "Welcome secret agents at DBC! Let's generate some aliases!"
+until name == 'quit'
+	puts "Enter a name or type 'quit' when finished"
+	name = gets.chomp
+	original_name = name
+	if name != 'quit'
+# METHODS
+def dismantle_name (name)
+	name.split(' ').reverse.join(" ").downcase.chars
 end
-
-my_alias = AliasManager.new('Felicia Torres')
-p my_alias.generate_alias
+def change_vowels (name)
+	vowels = 'aeioua'
+	my_alias = []
+	name.each do |letter| 
+		if vowels.include?(letter)
+			next_vowel = vowels.index(letter) + 1
+			my_alias << vowels[next_vowel]
+		else
+			my_alias << letter
+		end
+	end
+	my_alias
+end
+def change_consonants (array)
+	consonants = 'bcdfghjklmnpqrstvwxyzb'
+	my_alias = []
+	array.each do |letter| 
+		if consonants.include?(letter)
+			next_letter = consonants.index(letter) + 1
+			my_alias << consonants[next_letter]
+		else
+			my_alias << letter
+		end
+	end
+	my_alias
+end
+def build_name (array)
+	array.join.split.map(&:capitalize)*' '
+end
+collected_names[build_name(change_consonants(change_vowels(dismantle_name(name)))).to_sym]=original_name
+puts "Your agents name is: " + build_name(change_consonants(change_vowels(dismantle_name(name)))) 
+else
+end
+end
+puts "Here's a complete list of your generated alias's!"
+puts "______"*6
+collected_names.each do |alias_name, real_name| 
+	puts "#{alias_name} formerly known as, #{real_name}"
+end
+puts "______"*6

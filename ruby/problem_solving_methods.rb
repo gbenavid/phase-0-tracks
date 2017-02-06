@@ -1,33 +1,28 @@
-# Array: Take a number and return it's index in relation to the array
-arr = [42, 89, 23, 2]
-def search_arr (arr, integer)		
-	new_arr = [] 
-	arr.each do |number|
-	new_arr << number
-		if (number == integer)
-			return new_arr.length - 1
-		elsif (new_arr.length == arr.length)
-			return nil
-		end
-	end
+def search_array(array, value)
+  index = []
+  array.each do |number|  
+    if number == value 
+      return index.length
+    elsif number != value && array.count(value) == 0
+      return nil
+    end
+    index << 1
+  end
 end
-puts search_arr(arr, 2123)
-
-# Take the number and generate an array that is the length of the number.
-
-# Input => One number
+# DRIVER CODE
+arr = [42, 89, 23, 1]
+p search_array(arr, 42)
+p search_array(arr, 24)
 def fib (number)
-	fib_arr = [0, 1]
-	(number -2).to_i.times do 
-	# reccure over this method x times (number = x)
-	# -1 + - 2 ==> new number
-	fib_arr << fib_arr[-1].to_i + fib_arr[-2].to_i
-	end
-	return fib_arr
+  fib_arr = [0, 1]
+  (number -2).times do	
+    fib_arr << fib_arr[-1].to_i + fib_arr[-2].to_i
+  end
+  return fib_arr
 end
-# Output => an array of numbers
-p fib(1)
-
+# DRIVER CODE
+# p fib(6) == [0,1,1,2,3,5]
+# p fib(100).last == 218922995834555169026
 # Release 2
 # Input => [1, 3, 4, 12, 5, 2]
 def bubble_sort(array)
@@ -49,6 +44,3 @@ def bubble_sort(array)
   array # return an array
 end
 # Output => [1, 2, 3, 4, 5, 12]
-
-
-
