@@ -1,3 +1,49 @@
+#NEW WORK: FROGS:
+
+class Daycare
+  #ATTRIBUTES
+  attr_reader :care_center
+  attr_accessor :kid
+  def initialize(kid)
+    @care_center = "\n1234 Pleasant Dr. \nSan Francisco, CA \n90109, USA"
+    @kid = kid
+  end
+  #METHODS
+  def hungry(snack)
+    puts "I'm hungry! "*3
+    puts "Here's a #{snack}"
+  end
+  def reeses
+    puts "*RING-RING-RING!!!*"
+    puts "Here's a jacket before you go outside, #{@kid} "
+  end
+  def miss_mommy
+    time_left = 21 - Time.now.hour 
+    puts "You have #{time_left} more hours until Mommy comes to pick you up."
+  end
+end
+Jr = Daycare.new("Tristan")
+Jr.hungry("apple")
+Jr.reeses
+Jr.miss_mommy
+puts "Your child #{Jr.kid} is currently staying at: #{Jr.care_center}"
+
+play_pen = []
+50.times do 
+  child = Daycare.new("Kennedy") 
+  child.hungry("raisin")
+  child.reeses
+  child.miss_mommy
+  puts "Your child #{child.kid} is currently staying at: #{child.care_center}"
+  puts "*~"*37
+  play_pen << child
+end
+play_pen.each do |child|
+  child.hungry("bunch of grapes")
+  child.reeses
+end
+
+#OLD WORK: FOXES
 class Puppy
 
   def fetch(toy)
