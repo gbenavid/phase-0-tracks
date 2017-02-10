@@ -1,9 +1,9 @@
 # GPS 2.2 - Ruby
-def create_list(string)
+def create_list(list_of_food_items)
   list = {}
-  items_array = string.split(' ')
-  items_array.each do |i|
-    list[i] = 1
+  items_array = list_of_food_items.split(' ')
+  items_array.each do |food_item|
+    list[food_item] = 1
   end
   list
 end
