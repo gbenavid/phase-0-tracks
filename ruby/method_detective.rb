@@ -37,4 +37,8 @@ puts "z".ord.eql? 122
 # 122 is the integer ordinal of z.
 
 puts "~*"*6 + " culprit 10 was caught?"
+<<<<<<< HEAD
 puts "How many times does the letter 'a' appear in this string?".count("a").eql? 4
+=======
+puts "How many times does the letter 'a' appear in this string?".count("a").eql? 4
+>>>>>>> 75870d8f93a4a29fa1f3074a2166c399b2a4baf6
