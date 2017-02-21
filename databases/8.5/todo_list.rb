@@ -1,10 +1,5 @@
 require 'sqlite3'
 require 'faker'
-# Tracking CASH before you spend it:
-	# Create data: Insert themselves into the database
-	# Retrieve data: Too view your spending
-	# Manipulate data: Update their remaining balance
-
 db = SQLite3::Database.new("users.db")
 create_table = <<-USER_TABLE
 	CREATE TABLE IF NOT EXISTS users(
@@ -16,7 +11,10 @@ create_table = <<-USER_TABLE
 	)
 USER_TABLE
 db.execute(create_table)
-
+# Money Management--
+	# Create data: Insert themselves into the database
+	# Retrieve data: Too view your spending
+	# Manipulate data: Update their remaining balance
 # UI FOR ADDING A USER
 	# puts "Welcome! Let's start tracking your daily spending. \nPlease enter the following fields. \nName: "
 	# name = gets.chomp
@@ -43,35 +41,14 @@ def display_user(db, name)
 end
 # display_user(db, name)
 
-# Manipulate data: Update their spending
-	puts "what's your name?"
-	name = gets.chomp
-	puts "What is your new remaining value?"
-	balance = gets.chomp.to_i
-
+# UI FOR UPDATING TABLE
+	# puts "what's your name?"
+	# name = gets.chomp
+	# puts "What is your new remaining value?"
+	# balance = gets.chomp.to_i
 def update_remaining(db, new_value_at_remaining, name)
 	db.execute("UPDATE users SET remaining= ? WHERE name = ?", [new_value_at_remaining, name])
 	array = db.execute("SELECT * FROM users WHERE name=(?)", [name])
 	puts "Your account currently reflects that you now have $#{array[0][4]} left to spend at #{array[0][2]}"
 end
-update_remaining(db, balance, name)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# update_remaining(db, balance, name)
