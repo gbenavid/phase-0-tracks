@@ -5,13 +5,15 @@ How do you join three tables at once?
    ...> The food was meh, but ceap|Sushi World|Berry
         A real chill joint|Lotus Yoga|George
         Love was in the air...|Grundy Hollow Wedding Chapel|Kaling
-        Kind of a smelly palce, gross!|The Beagle Nightclub|Jolie 
+        Kind of a smelly place, gross!|The Beagle Nightclub|Jolie 
 
 View just the user's names, the business name, the star rating, and the comment.
+  
   SELECT users.last, businesses.name, reviews.stars, reviews.comment 
   FROM reviews JOIN businesses ON reviews.business_id = businesses.id,
   users ON reviews.user_id = users.id;
-   ...> Berry|Sushi World|3|The food was meh, but ceap
+
+   ...> Berry|Sushi World|3|The food was meh, but cheap
         George|Lotus Yoga|5|A real chill joint
         Kaling|Grundy Hollow Wedding Chapel|4|Love was in the 
 			air...
@@ -19,7 +21,7 @@ View just the user's names, the business name, the star rating, and the comment.
 
 How do you view the data of all three tables for just one particular business?
 
-SELECT users.last, businesses.name, reviews.stars, reviews.comment 
+  SELECT users.last, businesses.name, reviews.stars, reviews.comment 
   FROM reviews JOIN businesses ON reviews.business_id = businesses.id,
   users ON reviews.user_id = users.id;
 
@@ -27,15 +29,14 @@ SELECT users.last, businesses.name, reviews.stars, reviews.comment
 					air...
 
 SELECT * FROM reviews, businesses WHERE reviews.business_id = 1; 
-		...> 1|3|The food was meh, but ceap|6|5|6|Sushi World
+     ...> 1|3|The food was meh, but cheap|6|5|6|Sushi World
+SELECT * 
+  FROM reviews, users, businesses
+  JOIN users ON users.id = reviews.user_id 
+businesses ON businesses.id = reviews.business_id;
 
-
-
-
-
-
-
-
-
-
-
+SELECT reviews.comment, businesses.name, users.last 
+  FROM reviews 
+  JOIN businesses ON reviews.business_id = businesses.id, 
+  users ON reviews.user_id = users.id
+WHERE businesses.name = “Grundy Hollow Wedding Chapel”;
