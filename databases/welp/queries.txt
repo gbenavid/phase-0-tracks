@@ -39,7 +39,3 @@ SELECT * FROM reviews, businesses WHERE reviews.business_id = 1;
 
 
 
-
-
-
-
