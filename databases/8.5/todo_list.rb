@@ -23,7 +23,8 @@ end
 
 def display_user(db, name)
 	array = db.execute("SELECT * FROM users WHERE name=(?)", [name])
-	puts "You currently have a $#{array[0][3]} budget set for #{array[0][2]}."
+	result = array[0]
+	puts "You currently have a $#{result[3]} budget set for #{result[2]}."
 end
 
 def update_remaining(db, new_value_at_remaining, name)
@@ -31,7 +32,7 @@ def update_remaining(db, new_value_at_remaining, name)
 	array = db.execute("SELECT * FROM users WHERE name=(?)", [name])
 	puts "Your account currently reflects that you now have $#{array[0][4]} left to spend at #{array[0][2]}"
 end
-
+[[]]
 # UI
 puts "Welcome to the Financial Tracker 2000. Please select one of the options by entering the corresponding number:"
 	puts <<-UI
@@ -64,15 +65,3 @@ elsif option == 3
 else
 	puts "Opps, sorry that's not a valid option. Goodbye."
 end
-
-
-
-
-
-
-
-
-
-
-
-
