@@ -14,7 +14,7 @@ View just the user's names, the business name, the star rating, and the comment.
    ...> Berry|Sushi World|3|The food was meh, but ceap
         George|Lotus Yoga|5|A real chill joint
         Kaling|Grundy Hollow Wedding Chapel|4|Love was in the air...
-        Jolie|The Beagle Nightclub|1|Kind of a smelly palce, gross!
+        Jolie|The Beagle Nightclub|1|Kind of a smelly place, gross!
 
 How do you view the data of all three tables for just one particular business?
   businesses.name, users.first, reviews.stars, reviews.comment FROM 
