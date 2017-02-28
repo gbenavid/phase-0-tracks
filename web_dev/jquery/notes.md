@@ -18,12 +18,9 @@
  	- JQUERY: A JS file that you include in your web pages. It lets you find new elements using CSS-style selectors and then *do something with the elements using jQuery methods*. 
 
 ## In my own words:
-<<<<<<< HEAD
-	jQuery's motto is 'Write less, do more,' because it allows for shorted JS code. With jQuery you can *select elements*, *preform tasks*, and *handle events*. 
-=======
+  jQuery's motto is 'Write less, do more,' because it allows for shorted JS code. With jQuery you can *select elements, preform tasks, and handle events. 
 	jQuery's motto is 'Write less, do more,' because it allows for shorted JS code. With jQuery you can select elements, preform tasks, and handle events. 
 	
->>>>>>> cd3d350698b3d73a537c13b82f1525e51224642c
 ### Select Elements:
 Selecting an element with jQuery is simpler because it uses CSS-style selectors that do it with DOM queries. This is also more powerful and flexible.
 
