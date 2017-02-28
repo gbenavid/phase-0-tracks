@@ -1,8 +1,9 @@
 # Release 0:
  * Spend 10 minutes making a plan for how you intend to tackle jQuery and learn as much as you can in two hours.
- ..* [FAIL] This point is indented with the tab key (two spaces)
-    ..* [FAIL] This point is indented using 4 spaces.
+	:	definition
  * What sorts of resources will help?
- 		* TWO TABS ONE ASTERIX
- * How often should you stop and test what you just learned? 
+ : definition
+ * How often should you stop and test what you just learned?
+: definition
  * Are breaks important? Make a few notes in the file on how you plan to approach the topic, and why.
+ 	- subitem with dash
