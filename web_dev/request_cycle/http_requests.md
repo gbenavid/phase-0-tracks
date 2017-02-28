@@ -1,5 +1,6 @@
 1. What are some common HTTP status codes?
-... 100 Continue: The client SHOULD continue with its request. The initial part of the request has been received and has not yet been rejected by the server. The client SHOULD continue by sending the remainder of the request or, if the request has already been completed, ignore this response. The server MUST send a final response after the request has been completed.
+
+..* 100 Continue: The client SHOULD continue with its request. The initial part of the request has been received and has not yet been rejected by the server. The client SHOULD continue by sending the remainder of the request or, if the request has already been completed, ignore this response. The server MUST send a final response after the request has been completed.
 ..* 200 OK: The request has succeeded. 
 ..* 201 Created: The request has been fulfilled and resulted in a new resource being created.
 ..* 204 No Content: The server has fulfilled the request but does not need to return an entity-body, and might want to return updated metainformation. 
