@@ -16,9 +16,3 @@
  # TERMINOLOGY:
  	- DOM: The Document Obj. Model uses objects to create a representation of the current page. It *creates a new object for each element* within a page.
  	- JQUERY: A JS file that you include in your web pages. It lets you find new elements using CSS-style selectors and then *do something with the elements using jQuery methods*. 
- 	
-
-
-
-
-
