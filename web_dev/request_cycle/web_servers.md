@@ -13,19 +13,19 @@ Imagine for a moment the chaos and frustration that would result from attempting
 --David Both
 
 In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
+..* A virtual private server is a server that is partitioned so that it has its own operating system, disc space, and bandwidth. Because it acts as a dedicated server this is a good interim solution for sites that may need a dedicated server in the future but are not yet ready for it. VPS hosting is a good bridge between shared hosting and dedicated hosting.
+
 ..* Without a need for a physical server VPS are cheaper
-..* VPS can be customized to what you need, and upgraded as you go along with your site. 
-
-
-
-
-
-
-
-
-
-
-
+..* VPS can be customized to what you need, and upgraded as you go along with your site. Features can be added or skipped. 
+..* Scalable 
+..* Root access is given for greater control.
+DISADVANTAGES WITH VPS
+..* More expensive than shared hosting
+..* Disproportionate allocations of resources among accounts. If each account is using it's resources at peak levels, it may cause server issues that may affect all other sites on the server. 
+http://www.webhostinghub.com/web-hosting-guide/the-pros-and-cons-of-vps-web-hosting
 
 
 Optional bonus question: Why is it considered a bad idea to run programs as the root user on a Linux system?
+
+..* Its just good practice on any operating system to run your applications on a user level and leave administrative tasks to the root user, and only on a per-need basis. This supports the security model that is in place, and applications are meant to run on non-administrative security. This prevents your shell from being wiped out in case an attacker approaches your system, you would want to preserve your root directory and instead work on a user level. 
+When you're logged as root, you can do everything -- the system won't ask! That's because the Linex philosophy assumes you know what you're doing.
