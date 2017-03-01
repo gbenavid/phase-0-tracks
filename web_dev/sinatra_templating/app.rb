@@ -2,7 +2,7 @@
 require 'sinatra'
 require 'sqlite3'
 
-set :public_folder, File.dirname(__FILE__) + '/static'
+set :public_folder, File.dirname(__FILE__) + '/static' # Configure this app to serve these static files.
 
 db = SQLite3::Database.new("students.db") # creting a new db w/ the student info
 db.results_as_hash = true #recieving our database results as a hash
@@ -18,13 +18,19 @@ get '/students/new' do
 end
 
 # create new students via a form
-post '/students' do #We use POST instead of GET
+post '/students' do # We use POST instead of GET
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
   redirect '/'
 end
 
 get '/correct/name' do
+	erb :change_name
+end
+
+post '/correct/name' do
+	# p params
 	db.execute("UPDATE students SET name=(?) WHERE id=(?)", [params['name'], params['id'].to_i])
+	redirect '/'
 end
 
 # add static resources-- use JS & CSS w/o creating new routes.
