@@ -1,16 +1,20 @@
+<!-- Erb is an HTML file it stands for embeded Ruby.  -->
+<!-- It let's us use a little bit of ruby that gets evaluated, but we can treate it like its HTML -->
 <html>
 <head>
   <title>Student Management System</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!--INCLUDE STYESHEET-->
 </head>
 <body>
   <h1>Student Management System</h1>
   <p>Welcome to the student management system.</p>
   <p>Click <a href="students/new">here</a> to create a new student.</p>
+  <p>Click <a href="correct/name">here</a> to change a student name.</p>
   <ul>
-    <% @students.each do |student| %>
-      <li><%= student['name'] %>, <%= student['age'] %></li>
+    <% @students.each do |student| %> 
+      <li><%= student['name'] %>, <%= student['age'] %></li> <!-- An = means that we want this code expressed on the page vs ran in the beackground-->
     <% end %>
   </ul>
 </body>
 </html>
+<!-- The < % convention on line 13 flags the begining & end of our Ruby code. It's eqivilant to the #{} symbol  -->
