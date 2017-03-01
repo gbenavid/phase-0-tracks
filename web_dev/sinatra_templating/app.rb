@@ -4,8 +4,8 @@ require 'sqlite3'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
 
-db = SQLite3::Database.new("students.db")
-db.results_as_hash = true
+db = SQLite3::Database.new("students.db") # creting a new db w/ the student info
+db.results_as_hash = true #recieving our database results as a hash
 
 # show students on the home page
 get '/' do
@@ -24,4 +24,4 @@ post '/students' do
   redirect '/'
 end
 
-# add static resources
+# add static resources-- use JS & CSS w/o creating new routes.
